@@ -9,7 +9,7 @@
   * zip_code	string	not null
   * culinary_pref	string	not null
   * about	text
-  * seeking_out_lunchmates_that_are	not null
+  * seeking_out_lunchmates_that_are	string not null
 
 * culinary_pref
   * id integer not null, primary key
@@ -32,16 +32,11 @@
   * id	integer	not null, primary key
   * user_id	integer	not null, foreign key, indexed,
   * question_id	integer	not null, foreign key, indexed, unique[user_id]
-  * answer integer	not null, foreign key (from question_options), indexed
-  * acceptable	integer	not null, foreign key (from question_options), indexed
-  * importance	integer	not null
-
 
 * messages
   * column name	data type	details
   * conversation_id	integer	not null, foreign key, indexed
   * sender_id	integer	not null, foreign key, indexed
-  * receiver_id	integer	not null, foreign key, indexed
   * content	text	not null
   * timestamp	date	not null
 
