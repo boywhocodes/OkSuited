@@ -19,7 +19,10 @@ Session
 
   * POST /api/session
   * DELETE /api/session
-  * GET /api/session/new - sign in user
+
+Messages
+
+  * POST /api/messages
 
 Conversations
 
