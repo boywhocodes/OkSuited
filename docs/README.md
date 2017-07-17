@@ -11,20 +11,7 @@ https://oksuited.herokuapp.com/#/signup
 
 * MVP
 
-OnBelay is a web application inspired by OKCupid built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
-
- Hosting on Heroku
- New account creation, login, and guest/demo login
- Browse and search other users by location and ‘looking for’
- Messaging
- Personality questions
- Match percentages based on question answers
- Production README
- Bonus: add likes
- Bonus: block or hide other users
- Bonus: mark importance of questions and weight accordingly in % match
-
- OKCatfish is a web application inspired by OKCupid that will be built using Ruby on Rails and React.js. By the end of Week 9, this app will, at the very least, satisfy the following criteria:
+Ok Suitedis a web application inspired by OKCupid built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
 
   1. Hosting on Heroku
 
