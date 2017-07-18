@@ -114,9 +114,21 @@ Ok Suitedis a web application inspired by OKCupid built using Ruby on Rails and 
 
 * Wireframes:
 
-https://drive.google.com/file/d/0BwEeuTLQCw86OVpMZl9FNTRSd0k/view?usp=sharing
+Profile-About: https://www.draw.io/?state=%7B%22ids%22:%5B%220BwEeuTLQCw86OVpMZl9FNTRSd0k%22%5D,%22action%22:%22open%22,%22userId%22:%22112197262788318165917%22%7D#G0BwEeuTLQCw86OVpMZl9FNTRSd0k
 
-https://drive.google.com/file/d/0BwEeuTLQCw86S3JxSG9tamtLQWs/view?usp=sharing
+Profile-Pics: https://www.draw.io/#G0BwEeuTLQCw86dnNlVDJacWJYLUE
+
+Profile-Questions: https://www.draw.io/?state=%7B%22ids%22:%5B%220BwEeuTLQCw86NExIVFp6elI4SGM%22%5D,%22action%22:%22open%22,%22userId%22:%22112197262788318165917%22%7D#G0BwEeuTLQCw86NExIVFp6elI4SGM
+
+Browse-Diagram: https://www.draw.io/#G0BwEeuTLQCw86S2N2cWtmOXlhdm8
+
+Sign-In 3: https://www.draw.io/#G0BwEeuTLQCw86OC1HMG9CeGhXNm8
+
+Sign-In 2: https://www.draw.io/?state=%7B%22ids%22:%5B%220BwEeuTLQCw86S3JxSG9tamtLQWs%22%5D,%22action%22:%22open%22,%22userId%22:%22112197262788318165917%22%7D#G0BwEeuTLQCw86QWJTSE5kSkEyaUE
+
+Opening-Page: https://www.draw.io/?state=%7B%22ids%22:%5B%220BwEeuTLQCw86S3JxSG9tamtLQWs%22%5D,%22action%22:%22open%22,%22userId%22:%22112197262788318165917%22%7D
+
+
 
 * Database initialization
 
