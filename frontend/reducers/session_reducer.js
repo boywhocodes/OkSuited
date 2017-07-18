@@ -8,13 +8,13 @@ import {
 const nullUser = Object.freeze({
   currentUser: null,
   errors: []
-})
+});
 
 const SessionReducer = (state = nullUser, action) => {
   Object.freeze(state)
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.currentUser
+      const currentUser = action.currentUser;
       return merge({}, nullUser, {
         currentUser
       });
@@ -23,8 +23,8 @@ const SessionReducer = (state = nullUser, action) => {
       return merge({}, nullUser, {
         errors
       });
-      default:
-        return state;
+    default:
+      return state;
   }
 };
 

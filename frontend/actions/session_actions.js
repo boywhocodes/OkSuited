@@ -5,10 +5,10 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
-  current_user
+  currentUser
 });
 
-export const receiveErrors = erros => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
 });
@@ -30,7 +30,7 @@ export const login = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logout.then(user => (
+  APIUtil.logout().then(user => (
     dispatch(receiveCurrentUser(null))
   ))
 );

@@ -1,15 +1,15 @@
 export const signup = user => (
   $.ajax({
     method: 'POST',
-    url: '/api/users'
-    data: console.log(user, "user"); // after console logging, not even receiving ajax request
+    url: '/api/users',
+    data: user // after console logging, not even receiving ajax request
   })
 );
 
 export const login = user => (
 $.ajax({
   method: 'POST',
-  url: '/api/session'
+  url: '/api/session',
   data: user
 })
 );
