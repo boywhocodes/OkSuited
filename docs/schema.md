@@ -18,7 +18,7 @@
 
 
 * questions
-  * id	integer	not null, primary key
+  * id integer	not null, primary key
   * title	text	not null
 
 
