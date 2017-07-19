@@ -13,13 +13,9 @@ import {
 
 
 const App = () => (
-  <div className="homepage">
+  <div>
 
-    <header>
-    <h1>Stop coding, get Lunchin with OkSuited!</h1>
-    <GreetingContainer />
-    </header>
-
+    <Route exact path="/" component={GreetingContainer} />
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
   </div>

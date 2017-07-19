@@ -2,8 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.login-signup {
+  background-color: red;
+}
+
+.index-page-header {
+  background-color: blue;
+}
+
 .login-form-container {
-  // background-color: yellow;
+  background-color: yellow;
 }
 
 .login-form-box {
@@ -19,8 +27,4 @@
 .login-input {
   background-color: lightgrey;
   border: blue solid 3px;
-}
-
-.homepage {
-  background-color: green;
 }
