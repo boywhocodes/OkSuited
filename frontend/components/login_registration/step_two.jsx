@@ -9,7 +9,7 @@ const StepTwo = props => (
       placeholder="Age"/>
     <p>{props.age_errors}</p>
     <label>Zip Code</label>
-    <input type"text"
+    <input type="text"
       value={props.location}
       onChange={props.update("location")}
       placeholder="97229"/>

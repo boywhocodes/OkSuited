@@ -52,7 +52,7 @@ class LogInModal extends React.Component {
             placeholder="Password"
             className="login-password-box"/>
           <p>{this.props.errors.base}</p>
-          <input type="submit" value"Enter Lunch Portal of Greatness" className="login-button"/>
+          <input type="submit" value="Enter Lunch Portal of Greatness" className="login-button"/>
         </form>
       </div>
     );

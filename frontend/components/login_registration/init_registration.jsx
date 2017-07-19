@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link } from 'react-router';
 import SignUpFormContainer from './sign_up_form_container';
 import StepOne from './step_one';
 import StepTwo from './step_two';
@@ -81,4 +81,4 @@ class InitialRegistration extends React.Component {
     );
   }
 }
-export default withRouter(InitialRegistration);
+export default InitialRegistration;

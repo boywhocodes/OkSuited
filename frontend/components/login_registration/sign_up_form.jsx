@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link } from 'react-router';
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -80,4 +80,4 @@ class SignUpForm extends React.Component {
   }
 }
 
-export default withRouter(SignUpForm);
+export default SignUpForm;

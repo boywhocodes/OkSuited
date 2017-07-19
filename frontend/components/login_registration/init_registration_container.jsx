@@ -1,7 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { requestLogin, requestSignup } from '../..actions/log_reg_actions';
-import InitialRegistration from './initial_reg';
+import { requestLogin, requestSignup } from '../../actions/session_actions';
+import InitialRegistration from './init_registration';
 
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser),
@@ -12,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   signup: user => dispatch(requestSignup(user))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(InitialRegistration);
+)(InitialRegistration));

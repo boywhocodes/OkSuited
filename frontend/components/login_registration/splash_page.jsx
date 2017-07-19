@@ -1,5 +1,5 @@
 import React from 'react';
-import InitialRegistrationContainer from './initial_reg_container';
+import InitialRegistrationContainer from './init_registration_container';
 import { withRouter } from 'react-router';
 import LogInModalContainer from './login_modal_container';
 import LogInModal from './login_modal';
@@ -54,51 +54,51 @@ class SplashPage extends React.Component {
           style={ModalStyle}>
           <LogInModalContainer />
         </Modal>
-        <div className="background-group">
-          <div className="splash-header-group">
-            <div className="signin-header">
-              {"Have an account?"}
-              <button className="login-button" onClick={this.handleClick} >
-                Log In
-              </button>
-              <button className="demo-login" onClick={this.handleGuest} >
-                Demo Login
-              </button>
-            </div>
-            <h1 className="main-logo">OkSuited</h1>
-          </div>
-          <div className="splash-bottom">
-            <div className="tagline">
-              Find a lunch mate for your next lunch break
-            </div>
-            <InitialRegistrationContainer />
-          </div>
-        </div>
+                          <div className="background-group">
+                                  <div className="splash-header-group" >
+                                            <div className="signin-header">
+                                              "Have an account?"
+                                              <button className="login-button" onClick={this.handleClick} >
+                                                Log In
+                                              </button>
+                                              <button className="demo-login" onClick={this.handleGuest} >
+                                                Demo Login
+                                              </button>
+                                            </div>
+                                    <h1 className="main-logo">OkSuited</h1>
+                                  </div>
+                                  <div className="splash-bottom">
+                                          <div className="tagline">
+                                            Find a lunch mate for your next lunch break
+                                          </div>
+
+                                  </div>
+                          </div>
       <div className="bottom-section-group">
         <div className="image-container-group">
           <div className="image-box">
             <img src="" ></img>
             <p>
-              {""}
+              first placeholder
             </p>
           </div>
           <div className="image-box">
             <img src="" ></img>
             <p>
-              {""}
+              second placeholder
             </p>
           </div>
           <div className="image-box">
             <img src="" ></img>
             <p>
-              {""}
+              last placeholder
             </p>
           </div>
         </div>
         </div>
         <footer className="footer-group">
           <p className="footer-styling">
-            {"© OkSuited - Eat Lunch, Make New Friends"}
+            "© OkSuited - Eat Lunch, Make New Friends"
           </p>
         </footer>
       </div>

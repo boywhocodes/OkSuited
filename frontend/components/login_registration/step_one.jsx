@@ -24,4 +24,6 @@ const StepOne = props => (
       <option value="notspecified">Not Specified</option>
     </select>
   </form>
-)
+);
+
+export default StepOne;
