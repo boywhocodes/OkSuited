@@ -1,8 +1,7 @@
 
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
-import SessionFormContainer from './session_form/session_form_container';
-import { AuthRoute } from '../util/route_util';
+import { connect } from 'react-redux';
+
 import {
   Route,
   Redirect,
@@ -12,14 +11,19 @@ import {
 } from 'react-router-dom';
 
 
-const App = () => (
+const App = ({ children }) => {
+  return (
   <div>
-
-    <Route exact path="/" component={GreetingContainer} />
-    <AuthRoute path="/login" component={SessionFormContainer} />
-    <AuthRoute path="/signup" component={SessionFormContainer} />
+    { children }
   </div>
 );
+}
+
+const mapStateToProps = state => ({
+
+});
 
 
-export default App;
+export default connect(
+  mapStateToProps
+)(App);

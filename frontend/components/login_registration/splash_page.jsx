@@ -74,7 +74,6 @@ class SplashPage extends React.Component {
             <InitialRegistrationContainer />
           </div>
         </div>
-      </div>
       <div className="bottom-section-group">
         <div className="image-container-group">
           <div className="image-box">
@@ -96,11 +95,12 @@ class SplashPage extends React.Component {
             </p>
           </div>
         </div>
-      <footer className="footer-group">
-        <p className="footer-styling">
-          {"© OkSuited - Eat Lunch, Make New Friends"}
-        </p>
-      </footer>
+        </div>
+        <footer className="footer-group">
+          <p className="footer-styling">
+            {"© OkSuited - Eat Lunch, Make New Friends"}
+          </p>
+        </footer>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import LogInModal from './login_modal';
 import { requestLogin } from '../../actions/session_actions';
-import { receiveModal } from '../..actions/modal_actions';
+import { receiveModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser),

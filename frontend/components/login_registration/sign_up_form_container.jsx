@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignUpForm from './sign_up_form';
-import { requestSignUp } from '../../actions/session_actions';
+import { requestSignup } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser),

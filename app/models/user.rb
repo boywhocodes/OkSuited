@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 	validates :username, :password_digest, :session_token, presence: true
 	validates :username, uniqueness: true
 	validates :password, length: {minimum: 6}, allow_nil: :true
+  # validates :age inclusion: { in: 18..100 }
+  validates :location, length: {is: 5 }
 
 	after_initialize :ensure_session_token
 	before_validation :ensure_session_token_uniqueness

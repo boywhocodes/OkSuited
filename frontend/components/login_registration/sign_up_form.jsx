@@ -74,7 +74,7 @@ class SignUpForm extends React.Component {
         className="step-two-box"
         />
       <p>{this.displayPassword()} {this.props.errors.password}</p>
-      <input type="submit" value="Start Eating!" className="start-eating-button"
+      <input type="submit" value="Start Eating!" className="start-eating-button"/>
       </form>
     );
   }
