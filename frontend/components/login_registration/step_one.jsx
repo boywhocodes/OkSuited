@@ -23,6 +23,7 @@ const StepOne = props => (
       <option value="genderfluid">Genderfluid</option>
       <option value="notspecified">Not Specified</option>
     </select>
+    <input type="submit" value="Continue" className="continue-button" />
   </form>
 );
 

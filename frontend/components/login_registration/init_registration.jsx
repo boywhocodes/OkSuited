@@ -46,6 +46,13 @@ class InitialRegistration extends React.Component {
     });
   }
 
+  changeStep(e) {
+    e.preventDefault();
+    this.setState({
+      registrationStep: this.state.registrationStep + 1
+    });
+  }
+
   render() {
     let currentForm;
     if (this.state.registrationStep === 0) {
@@ -60,7 +67,7 @@ class InitialRegistration extends React.Component {
       currentForm = (
         <StepTwo
           submit={ this.handleSecondStep }
-          update={ this.udpate }
+          update={ this.update }
           age={ this.state.age }
           location={ this.state.location } />
       );
@@ -77,7 +84,7 @@ class InitialRegistration extends React.Component {
     }
 
     return (
-      { currentForm }
+      currentForm
     );
   }
 }

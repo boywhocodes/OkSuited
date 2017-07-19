@@ -71,7 +71,7 @@ class SplashPage extends React.Component {
                                           <div className="tagline">
                                             Find a lunch mate for your next lunch break
                                           </div>
-
+                                    <InitialRegistrationContainer />
                                   </div>
                           </div>
       <div className="bottom-section-group">
