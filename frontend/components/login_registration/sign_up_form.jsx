@@ -38,7 +38,7 @@ class SignUpForm extends React.Component {
 
     this.props.signup(user).then(user => {
       this.setState({ username: "", password: ""});
-      this.props.router.push(`/profile/${user.currentUser.id}`);
+      this.props.router.push(`/`);
     });
   }
 

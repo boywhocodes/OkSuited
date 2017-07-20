@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import SplashPageContainer from './login_registration/splash_page_container';
 import SignUpFormContainer from './login_registration/sign_up_form_container';
 import ProfileContainer from './profile/profile_container';
+import GreetingContainer from './greeting/greeting_container';
 
 import {
   Route,
@@ -35,7 +36,8 @@ const _redirectIfLoggedIn = (nextState, replace) => {
     <header>
 
     </header>
-    <Route path="/" component={ProfileContainer} />
+
+    <Route path="/" component={SplashPageContainer} />
 
 
   </div>

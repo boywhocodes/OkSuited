@@ -21,8 +21,8 @@ class LogInModal extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.login(user).then(user => {
       this.setState({ username: "", password: "" });
-      this.props.setModal(false);
-      this.props.router.push('/')
+      this.props.closeLogInModal();
+      this.props.history.push('/')
     });
   }
 
@@ -33,7 +33,7 @@ class LogInModal extends React.Component {
   handleClick(e) {
     e.preventDefault();
 
-    this.props.setModal(false);
+    this.props.closeLogInModal();
   }
 
   render() {
@@ -51,7 +51,7 @@ class LogInModal extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
             className="login-password-box"/>
-          <p>{this.props.errors.base}</p>
+          <p>{this.props.errors}</p>
           <input type="submit" value="Enter Lunch Portal of Greatness" className="login-button"/>
         </form>
       </div>

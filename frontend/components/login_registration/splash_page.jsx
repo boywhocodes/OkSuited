@@ -13,34 +13,25 @@ class SplashPage extends React.Component {
     this.state = {
       username: "",
       password: "",
-      modalIsOpen: false
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleGuest = this.handleGuest.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+
 
   }
 
   handleClick(e) {
     e.preventDefault();
-    this.openModal(true);
-  }
+    this.props.openLogInModal();
+  };
 
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
-
-  closeModal() {
-    this.setState({modalIsOpen: false});
-  }
 
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "illjavanotherbug", password: "password"}).then(ser => {
-      this.props.router.push('/');
+    this.props.login({ username: "54321", password: "123456"}).then(user => {
+      this.props.history.push('/');
     });
   }
 
@@ -48,32 +39,32 @@ class SplashPage extends React.Component {
     return (
       <div className="everything">
         <Modal
-          isOpen={this.state.modalIsOpen}
+          isOpen={this.props.logInModalOpen}
           contentLabel="modal"
-          onRequestClose={this.closeModal}
+          onRequestClose={this.props.closeLogInModal}
           style={ModalStyle}>
           <LogInModalContainer />
         </Modal>
-                          <div className="background-group">
-                                  <div className="splash-header-group" >
-                                            <div className="signin-header">
-                                              "Have an account?"
-                                              <button className="login-button" onClick={this.handleClick} >
-                                                Log In
-                                              </button>
-                                              <button className="demo-login" onClick={this.handleGuest} >
-                                                Demo Login
-                                              </button>
-                                            </div>
-                                    <h1 className="main-logo">OkSuited</h1>
-                                  </div>
-                                  <div className="splash-bottom">
-                                          <div className="tagline">
-                                            Find a lunch mate for your next lunch break
-                                          </div>
-                                    <InitialRegistrationContainer />
-                                  </div>
+          <div className="background-group">
+                  <div className="splash-header-group" >
+                            <div className="signin-header">
+                              "Have an account?"
+                              <button className="login-button" onClick={this.handleClick} >
+                                Log In
+                              </button>
+                              <button className="demo-login" onClick={this.handleGuest} >
+                                Demo Login
+                              </button>
+                            </div>
+                    <h1 className="main-logo">OkSuited</h1>
+                  </div>
+                  <div className="splash-bottom">
+                          <div className="tagline">
+                            Find a lunch mate for your next lunch break
                           </div>
+                    <InitialRegistrationContainer />
+                  </div>
+          </div>
       <div className="bottom-section-group">
         <div className="image-container-group">
           <div className="image-box">
