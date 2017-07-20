@@ -8,7 +8,7 @@ export const fetchSingleResponse = (response_id) => {
 export const fetchResponses = (user_id) => {
   return $.ajax({
     method: 'GET',
-    url: 'apiresponses'
+    url: 'api/responses',
     data: {  response: {user_id} }
   });
 };

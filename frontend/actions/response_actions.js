@@ -11,7 +11,7 @@ export const fetchSingleResponse = (response_id) => {
 
 export const fetchResponses = (user_id) => {
   return (dispatch) => {
-    reutrn APIUtil.fetchResponses(user_id).then((responses) => dispatch(receiveResponses(responses)));
+    return APIUtil.fetchResponses(user_id).then((responses) => dispatch(receiveResponses(responses)));
   };
 };
 

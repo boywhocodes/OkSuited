@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import EssayContainer from './essay_container';
-import TabsContainer from '../tabs/tabs_container';
-import QuestionsContainer from '../question/questions_container';
+// import EssayContainer from './essay_container';
+// import TabsContainer from '../tabs/tabs_container';
+// import QuestionsContainer from '../question/questions_container';
 import merge from 'lodash/merge';
 
 class Profile extends React.Component {
@@ -39,7 +39,7 @@ class Profile extends React.Component {
         cloud_name: '123456',
         upload_preset: '654321',
         theme: 'minimal'
-      }
+      },
       (errors, imageInfo) => {
         if (errors === null) {
           let cloud_url = imageInfo[0].url;

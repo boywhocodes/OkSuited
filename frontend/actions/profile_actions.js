@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/profile_apit_util';
+import * as APIUtil from '../util/profile_api_util';
 
 export const RECEIVE_CURRENT_PROFILE = 'RECEIVE_CURRENT_PROFILE';
 export const UPDATE_PROFILE  = 'UPDATE_PROFILE';

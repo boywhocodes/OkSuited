@@ -15,7 +15,7 @@ export const updateProfile = (user) => {
 
 export const updateImage = (formData, user) => {
   return $.ajax({
-    method: 'PATCH';
+    method: 'PATCH',
     url: `api/users/${user.id}`,
     processData: false,
     contentType: false,
