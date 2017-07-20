@@ -46,7 +46,7 @@ class SplashPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="everything">
         <Modal
           isOpen={this.state.modalIsOpen}
           contentLabel="modal"
