@@ -16,4 +16,13 @@
 
 body {
   background-image: url(https://static.pexels.com/photos/511763/pexels-photo-511763.jpeg);
+  color: #001f3f;
+
+}
+
+.background-group {
+  color: #001f3f;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
 }
