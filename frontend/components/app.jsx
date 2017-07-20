@@ -14,6 +14,21 @@ import {
 
 
 const App = () => {
+
+const _ensureLoggedIn = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+  if (!currentUser) {
+    replace('/signup');
+  }
+};
+
+const _redirectIfLoggedIn = (nextState, replace) => {
+  const currentUser = store.getState().session.currentUser;
+  if (currentUser) {
+    replace('/');
+  }
+};
+
   return (
   <div>
     <header>
