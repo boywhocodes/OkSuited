@@ -39,11 +39,14 @@ class InitialRegistration extends React.Component {
 //Setting State for second step params
   handleSecondStep(e) {
     e.preventDefault();
-    this.setState({
-      age: this.state.age,
-      location: this.state.location,
-      registrationStep: 2
-    });
+    if (this.state.age >= 100 || this.state.age <= 13 || this.state.location.length >= 6 || this.state.location.length <= 4 ) {
+      registrationStep: 1
+    } else {
+      this.setState({
+        age: this.state.age,
+        location: this.state.location,
+        registrationStep: 2
+    })};
   }
 
   changeStep(e) {
