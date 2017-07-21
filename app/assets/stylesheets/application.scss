@@ -10,14 +10,20 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
  *= require_self
  */
+// CSS Reset
+@import "base/reset.scss";
+
+//Core
+@import "base/colors.scss";
+@import "base/fonts.scss";
 
 body {
-  background-image: url(https://static.pexels.com/photos/511763/pexels-photo-511763.jpeg);
+
   color: #001f3f;
-  
+
 
 }
 

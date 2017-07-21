@@ -1,4 +1,4 @@
-import {  connect } fro 'react-redux';
+import {  connect } from 'react-redux';
 import {  fetchCurrentProfile, updateProfile } from '../../actions/profile_actions';
 import Essay from './essay';
 

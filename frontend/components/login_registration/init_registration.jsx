@@ -13,7 +13,8 @@ class InitialRegistration extends React.Component {
       eating_speed: "slow-eater",
       gender: "male",
       age: "",
-      location: ""
+      location: "",
+      errors: []
     };
 
     this.handleFirstStep = this.handleFirstStep.bind(this);
@@ -39,14 +40,25 @@ class InitialRegistration extends React.Component {
 //Setting State for second step params
   handleSecondStep(e) {
     e.preventDefault();
-    if (this.state.age >= 100 || this.state.age <= 13 || this.state.location.length >= 6 || this.state.location.length <= 4 ) {
-      registrationStep: 1
-    } else {
+    let errors = [];
+    if (this.state.age >= 100 || this.state.age <= 13) {
+      errors.push("Age must be between 13-100");
+    }
+      if (this.state.location.length >= 6 || this.state.location.length <= 4 ) {
+      errors.push("Please enter proper zipcode");
+    }
+    if (errors.length === 0) {
       this.setState({
         age: this.state.age,
         location: this.state.location,
-        registrationStep: 2
-    })};
+        registrationStep: 2,
+        errors: []
+    }
+  )} else {
+    this.setState({
+      errors  //set of key of errors in state to variable rrros
+    })
+  };
   }
 
   changeStep(e) {
@@ -72,7 +84,8 @@ class InitialRegistration extends React.Component {
           submit={ this.handleSecondStep }
           update={ this.update }
           age={ this.state.age }
-          location={ this.state.location } />
+          location={ this.state.location }
+        errors={this.state.errors } />
       );
     } else if (this.state.registrationStep === 2) {
       const userInfo = {

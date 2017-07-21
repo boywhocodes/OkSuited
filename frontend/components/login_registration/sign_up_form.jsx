@@ -71,6 +71,7 @@ class SignUpForm extends React.Component {
 
     return (
       <form onSubmit={ this.handleSubmit }>
+        {this.renderErrors()}
         <label>Username</label>
         <input type="text"
           value={this.state.username}
@@ -79,7 +80,6 @@ class SignUpForm extends React.Component {
           className="step-two-box"
           />
 
-        <p>{this.renderErrors()}</p>
 
       <label>Password</label>
       <input type="password"

@@ -41,7 +41,7 @@ const App = () => {
 
 
     <div>
-      <Route exact path="/proifle" component={ProfileContainer} />
+      <Route exact path="/profile" component={ProfileContainer} />
     <Route exact path="/" component={SplashPageContainer} />
   </div>
 

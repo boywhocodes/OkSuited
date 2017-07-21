@@ -1,7 +1,9 @@
 import React from 'react';
 
 const StepTwo = props => (
+
   <form onSubmit={props.submit}>
+    <ul>{props.errors.map(error => <li>{error}</li> )}</ul>
     <label>Age</label>
     <input type="text"
       value={props.age}

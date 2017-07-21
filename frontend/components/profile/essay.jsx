@@ -7,7 +7,7 @@ class Essay extends React.Component {
   }
 
   render() {
-    it (this.props.profile) {
+    if (this.props.profile) {
       return(
         <div className="profile-content">
           <EssayDetail
