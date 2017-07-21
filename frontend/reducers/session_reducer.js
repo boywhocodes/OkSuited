@@ -7,7 +7,7 @@ import {
 
 const nullUser = Object.freeze({
   currentUser: null,
-  errors: []
+  errors: [""]
 });
 
 const SessionReducer = (state = nullUser, action) => {

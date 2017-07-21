@@ -2,6 +2,7 @@ import React from 'react';
 import InitialRegistrationContainer from './init_registration_container';
 import { withRouter } from 'react-router';
 import LogInModalContainer from './login_modal_container';
+import NavbarContainer from '../navigation/nav_bar_container';
 import LogInModal from './login_modal';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
@@ -55,6 +56,7 @@ class SplashPage extends React.Component {
                               <button className="demo-login" onClick={this.handleGuest} >
                                 Demo Login
                               </button>
+                              
                             </div>
                     <h1 className="main-logo">OkSuited</h1>
                   </div>

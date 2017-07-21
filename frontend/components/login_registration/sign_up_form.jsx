@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import {withRouter} from 'react-router-dom';
 
 class SignUpForm extends React.Component {
   constructor(props) {
@@ -16,15 +17,15 @@ class SignUpForm extends React.Component {
     this.displayPassword = this.displayPassword.bind(this);
   }
 
-  componentDidUpdate() {
-    this.redirectIfLoggedIn();
-  }
+  // componentDidUpdate() {
+  //   this.redirectIfLoggedIn();
+  // }
 
-  redirectIfLoggedIn() {
-    if (this.props.loggedIn) {
-      this.props.router.push("/");
-    }
-  }
+  // redirectIfLoggedIn() {
+  //   if (this.props.loggedIn) {
+  //     this.props.history.push("/profile");
+  //   }
+  // }
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value });
@@ -38,8 +39,20 @@ class SignUpForm extends React.Component {
 
     this.props.signup(user).then(user => {
       this.setState({ username: "", password: ""});
-      this.props.router.push(`/`);
+      this.props.history.push(`/profile`);
     });
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   displayUsername() {
@@ -55,6 +68,7 @@ class SignUpForm extends React.Component {
   }
 
   render () {
+
     return (
       <form onSubmit={ this.handleSubmit }>
         <label>Username</label>
@@ -64,7 +78,8 @@ class SignUpForm extends React.Component {
           placeholder="Username"
           className="step-two-box"
           />
-        <p>{this.displayUsername()} {this.props.errors.username}</p>
+
+        <p>{this.renderErrors()}</p>
 
       <label>Password</label>
       <input type="password"
@@ -73,11 +88,11 @@ class SignUpForm extends React.Component {
         placeholder="Password"
         className="step-two-box"
         />
-      <p>{this.displayPassword()} {this.props.errors.password}</p>
       <input type="submit" value="Start Eating!" className="start-eating-button"/>
       </form>
+
     );
   }
 }
 
-export default SignUpForm;
+export default withRouter(SignUpForm);
