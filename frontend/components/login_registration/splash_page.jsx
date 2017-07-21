@@ -32,7 +32,7 @@ class SplashPage extends React.Component {
     e.preventDefault();
 
     this.props.login({ username: "54321", password: "123456"}).then(user => {
-      this.props.history.push('/');
+      this.props.history.push('/profile');
     });
   }
 
@@ -56,7 +56,7 @@ class SplashPage extends React.Component {
                               <button className="demo-login" onClick={this.handleGuest} >
                                 Demo Login
                               </button>
-                              
+
                             </div>
                     <h1 className="main-logo">OkSuited</h1>
                   </div>
