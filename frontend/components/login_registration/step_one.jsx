@@ -3,7 +3,7 @@ import React from 'react';
 //form for selecting options in dropdown style occuring on index page
 const StepOne = props => (
   <form onSubmit={props.submit}>
-    <span>
+    <span className="I-am">
       I am a
     </span>
     <select
@@ -23,7 +23,7 @@ const StepOne = props => (
       <option value="genderfluid">Genderfluid</option>
       <option value="notspecified">Not Specified</option>
     </select>
-    <input type="submit" value="Continue" className="continue-button" />
+    <div className="continue-button"><input type="submit" value="Continue"  /></div>
   </form>
 );
 

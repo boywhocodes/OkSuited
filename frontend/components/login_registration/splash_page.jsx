@@ -6,6 +6,9 @@ import NavbarContainer from '../navigation/nav_bar_container';
 import LogInModal from './login_modal';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bellefair');
+</style>
 
 class SplashPage extends React.Component {
   constructor(props) {
@@ -54,7 +57,7 @@ class SplashPage extends React.Component {
                                 Log In
                               </button>
                               <button className="demo-login" onClick={this.handleGuest} >
-                                Demo Login
+                                Demo User
                               </button>
 
                             </div>
@@ -67,33 +70,36 @@ class SplashPage extends React.Component {
                     <InitialRegistrationContainer />
                   </div>
           </div>
+
       <div className="bottom-section-group">
         <div className="image-container-group">
-          <div className="image-box">
-            <img src="" ></img>
-            <p>
-              first placeholder
+          <div>
+
+            <p className="image-box-0">
+              Needlessly find a new friend/colleague/mentor to share your lunch break with
             </p>
           </div>
-          <div className="image-box">
-            <img src="" ></img>
-            <p>
-              second placeholder
+          <div>
+
+            <p  className="image-box-1">
+              Synchronicity is key
+              Search for people depending on whether you're in a time crunch or want to take a leisurely lunch break you can
+
             </p>
           </div>
-          <div className="image-box">
-            <img src="" ></img>
-            <p>
-              last placeholder
+          <div>
+
+            <p className="image-box-2">
+              Only into Asian?  Cater your cuisine preferences dependingon what you're feeling like eating that day
             </p>
           </div>
-        </div>
         </div>
         <footer className="footer-group">
           <p className="footer-styling">
             "© OkSuited - Eat Lunch, Make New Friends"
           </p>
         </footer>
+        </div>
       </div>
     );
   }

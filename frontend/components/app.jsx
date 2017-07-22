@@ -40,7 +40,7 @@ const App = () => {
     </header>
 
 
-    <div>
+    <div className="behind-everything">
       <Route exact path="/profile" component={ProfileContainer} />
     <Route exact path="/" component={SplashPageContainer} />
   </div>
