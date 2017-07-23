@@ -15,6 +15,12 @@ export const fetchResponses = (user_id) => {
   };
 };
 
+export const createResponse = (response) => {
+  return (dispatch) => {
+    return APIUtil.postResponse(response).then((responses) => dispatch(receiveResponses(responses)));
+  };
+};
+
 export const receiveSingleResponse = (response) => {
   return {
     type: RECEIVE_SINGLE_RESPONSE,
