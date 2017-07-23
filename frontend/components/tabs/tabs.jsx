@@ -1,7 +1,7 @@
 import React from 'react';
 import EssayContainer from '../profile/essay_container';
 
-class Tabs from React.Component {
+class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
@@ -11,6 +11,10 @@ class Tabs from React.Component {
 
     this.tabArray = this.tabArray.bind(this);
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(idx) {
+    this.setState({ selectedIndex: idx })
   }
 
   tabArray() {
@@ -24,7 +28,7 @@ class Tabs from React.Component {
               <p>{tab}</p>
             </li>
           );
-          )
+
         }
       })
     );

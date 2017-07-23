@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import EssayContainer from './essay_container';
-// import TabsContainer from '../tabs/tabs_container';
+import TabsContainer from '../tabs/tabs_container';
 import QuestionsContainer from '../question/questions_container';
 import merge from 'lodash/merge';
 

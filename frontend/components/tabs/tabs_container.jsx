@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Tabs from ',/tabs';
+import Tabs from './tabs';
 
 const mapStateToProps = (state) => ({
   currentProfile: state.currentProfile
