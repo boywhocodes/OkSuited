@@ -1,8 +1,74 @@
-
+.step-one-form {
+  margin-bottom: 15px;
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-top: 63px;
+ font-size: 34px;
+}
 
 .I-am {
   color: #709996;
-  text-size: 20px;
+  text-size: 40px;
+}
+
+.step-one-buttons-eat-speed {
+  transition: 1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 198px;
+  height: 60px;
+  margin-right: 15px;
+  margin-left: 5px;
+  font-family: 'Bellefair', serif;
+  background-color: white;
+  color: #709996;
+  border: 0px;
+  outline: 0px;
+  padding: 0 10px;
+  box-shadow: 0 1px 3px #142a5d;
+}
+
+.step-one-buttons-eat-speed:hover {
+  background-color: #709996;
+  color: white;
+
+}
+
+
+.step-one-buttons-gender {
+  transition: 1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 180px;
+  height: 60px;
+  margin-right: 5px;
+  font-family: 'Bellefair', serif;
+  background-color: white;
+  color: #709996;
+  border: 0px;
+  outline: 0px;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px #142a5d;
+}
+
+.step-one-buttons-gender:hover {
+  background-color: #709996;
+  color: white;
+}
+
+.exclamation {
+  color: #709996;
+  padding-right: 10px;
 }
 
 
@@ -10,20 +76,28 @@
   transition: 1s;
   border: 1px solid black;
   border-radius:4px;
-// margin: 5px;
+  display: inline;
+  font-size: 20px;
+margin: 5px;
   text-align: center;
+
   padding: 7px;
-  background-color: grey;
+  background-color: white;
   color: #709996;
   box-shadow: 1px 1px 1px;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
+.continue-button:hover {
+  background-color: #709996;
+  color: white;
 }
+
+// input[type=button], input[type=submit], input[type=reset] {
+//     background-color: #4CAF50;
+//     border: none;
+//     color: white;
+//     padding: 16px 32px;
+//     text-decoration: none;
+//     margin: 4px 2px;
+//     cursor: pointer;
+// }

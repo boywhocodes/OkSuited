@@ -6,10 +6,10 @@ import { fetchQuestions } from '../../actions/question_actions';
 import { fetchResponses } from '../../actions/response_actions';
 
 const mapStateToProps = state => ({
-  profile: state.currentProfile.currentProfile,
-  currentUser: state.session.currentUser,
-  questions: state.questions.questions,
-  responses: state.responses.responses
+  // profile: state.currentProfile.currentProfile,
+  // currentUser: state.session.currentUser,
+  // questions: state.questions.questions,
+  // responses: state.responses.responses
 });
 
 const mapDispatchToProps = dispatch => ({

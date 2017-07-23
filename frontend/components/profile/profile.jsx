@@ -84,7 +84,7 @@ class Profile extends React.Component {
                 </div>
                 <div className="user-basics-group">
                   <h2 className="user-name">
-                    {this.props.profile.username}
+                    {this.props.profile.username}}
                   </h2>
                   <h3 className="user-details">
                     {this.props.profile.age} • {this.props.profile.eating_speed} • {this.props.profile.gender} • {this.props.profile.location}

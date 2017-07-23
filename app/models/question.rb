@@ -1,6 +1,6 @@
 class Question < ApplicationRecord
 
-  validates: :title, presence: true
+  validates :title, presence: true
 
   has_many :choices
 
