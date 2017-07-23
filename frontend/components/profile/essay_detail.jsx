@@ -93,7 +93,7 @@ class EssayDetail extends React.Component {
           type="text"
           placeholder={ this.props.placeHolder }
           onChange={ this.handleChange }
-          value={ this.state.userInput }
+          value={ this.state.userInput } />
 
           <input type="submit" value="Save" className="save-button" onClick={ this.handleUpdate }/ >
           <input type="submit" value="Cancel" className="cancel-button" onClick={ this.handleCancel } />

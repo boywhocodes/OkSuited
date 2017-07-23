@@ -4,9 +4,9 @@ import { fetchQuestions } from '../../actions/question_actions';
 import Questions from './questions';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
-  profile: state.currentProfile.currentProfile
-  questions: state.questions.questions
+  currentUser: state.session.currentUser,
+  profile: state.currentProfile.currentProfile,
+  questions: state.questions.questions,
   responses: state.responses.responses
 });
 

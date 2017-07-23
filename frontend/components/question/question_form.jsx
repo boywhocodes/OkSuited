@@ -84,7 +84,7 @@ class QuestionForm extends React.Component {
         } else {
           return this.props.questions[question];
         }
-      }).filter (val) => val !== undefined);
+      }).filter ((val) => val !== undefined);
 
       return unchoiced;
     } else {
@@ -104,7 +104,7 @@ class QuestionForm extends React.Component {
     const choices = this.questionStack()[0].choices.map((choice) => {
       return ([
         <label
-          htmlFor{"radio-choice-" + choice.id}
+          htmlFor={"radio-choice-" + choice.id} 
           key={choice.id}
           className="radio-choice" >
           <input
