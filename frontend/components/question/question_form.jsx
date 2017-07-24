@@ -104,7 +104,7 @@ class QuestionForm extends React.Component {
     const choices = this.questionStack()[0].choices.map((choice) => {
       return ([
         <label
-          htmlFor={"radio-choice-" + choice.id} 
+          htmlFor={"radio-choice-" + choice.id}
           key={choice.id}
           className="radio-choice" >
           <input
@@ -147,16 +147,7 @@ class QuestionForm extends React.Component {
     );
   }
 
-  renderImportance() {
-    return (
-      <div className="user-importance">
-        <div className="acceptables-title">
-          <p>Choices you won;t accept</p>
-        </div>
-        {acceptables}
-      </div>
-    );
-  }
+
 
   renderImportance() {
     return(
