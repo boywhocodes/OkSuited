@@ -1,9 +1,10 @@
 
 .behind-everything {
-  height: 60000px;
+  height: 100%;
 }
 
 .everything {
+  zoom: 380%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -140,16 +141,21 @@ margin: 5px;
 }
 
 @keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+	from { background-position: -1350% 0; }
+	to { background-position: 1000% 0; }
 }
 
 .behind-everything	{
 	// width: 560px;
 	// height: 400px;
-	background-image: url(https://static.pexels.com/photos/466267/pexels-photo-466267.jpeg);
+
+	background-image: url(https://static.pexels.com/photos/503175/pexels-photo-503175.jpeg);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 
-	animation: animatedBackground 40s linear infinite;
+	animation: animatedBackground 60s linear infinite;
+}
+
+.behind-everything {
+  zoom: 28%;
 }
