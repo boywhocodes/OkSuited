@@ -2,19 +2,21 @@ import React from 'react';
 
 const StepTwo = props => (
 
-  <form onSubmit={props.submit}>
+  <form onSubmit={props.submit} className="step-two-form">
     <ul>{props.errors.map(error => <li>{error}</li> )}</ul>
-    <label>Age</label>
+    <label className="step-two-age">Age</label>
     <input type="text"
       value={props.age}
       onChange={props.update("age")}
-      placeholder="Age"/>
+      placeholder="e.g. 27"
+      className="age-box"/>
     <p>{props.age_errors}</p>
-    <label>Zip Code</label>
+    <label className="step-two-zip-code">Zip Code</label>
     <input type="text"
       value={props.location}
       onChange={props.update("location")}
-      placeholder="97229"/>
+      placeholder="97229"
+      className="zip-box"/>
     <p>{props.zip_errors}</p>
     <input type="submit" value="Continue" className="continue-button" />
   </form>

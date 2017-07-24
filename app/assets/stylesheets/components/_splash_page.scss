@@ -56,6 +56,7 @@ to {background-position: -400px 0;}
   text-align: center;
   padding: 7px;
   color: #709996;
+  background-color: rgba(0,0,0, 0.1);
   box-shadow: 1px 1px 1px;
 }
 
@@ -67,7 +68,7 @@ to {background-position: -400px 0;}
 margin: 5px;
   text-align: center;
   padding: 7px;
-  background-color: white;
+  background-color: rgba(0,0,0, 0.1);
   color: #709996;
   box-shadow: 1px 1px 1px;
   // text-transform: uppercase;
@@ -163,7 +164,7 @@ margin: 5px;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
 
-	animation: animatedBackground 60s linear infinite;
+	animation: animatedBackground 120s linear infinite;
 }
 
 .behind-everything {
