@@ -52,7 +52,7 @@ class SplashPage extends React.Component {
           <div className="background-group">
                   <div className="splash-header-group" >
                             <div className="signin-header">
-                              "Have an account?"
+                              
                               <button className="login-button" onClick={this.handleClick} >
                                 Log In
                               </button>

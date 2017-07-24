@@ -18,7 +18,7 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCurrentProfile(this.props.params.userId).then(() => {
+    this.props.fetchCurrentProfile().then(() => {
       this.props.fetchResponses(this.props.profile.id);
       this.setState({ imageUrl: this.props.profile.image_file_name });
     });
@@ -26,8 +26,8 @@ class Profile extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.params.userId !== nextProps.params.userId) {
-      this.props.fetchCurrentProfile(nextProps.params.userId).then(() => this.setState({ imageUrl: this.props.profile.image_file_name}));
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchCurrentProfile(nextProps.match.params.userId).then(() => this.setState({ imageUrl: this.props.profile.image_file_name}));
     }
   }
 

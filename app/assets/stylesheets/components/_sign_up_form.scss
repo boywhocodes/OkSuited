@@ -1,0 +1,43 @@
+
+
+.sign-up-username-box {
+  transition: 1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 180px;
+  height: 60px;
+  margin-right: 5px;
+  font-family: 'Bellefair', serif;
+  background-color: #709996;
+  color: white;
+  border: 0px;
+  outline: 0px;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px #142a5d;
+}
+
+.sign-up-password-box
+
+.start-eating-button {
+  transition: 1s;
+  border: 1px solid black;
+  border-radius:4px;
+  display: inline;
+  font-size: 20px;
+margin: 5px;
+  text-align: center;
+
+  padding: 7px;
+  background-color: white;
+  color: #FF6953;
+  box-shadow: 1px 1px 1px;
+}
+
+.start-eating-button:hover {
+  background-color: #709996;
+  color: white;
+}

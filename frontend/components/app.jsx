@@ -27,7 +27,7 @@ const _ensureLoggedIn = (nextState, replace) => {
 const _redirectIfLoggedIn = (nextState, replace) => {
   const currentUser = store.getState().session.currentUser;
   if (currentUser) {
-    replace('/');
+    replace(`/profile/${currentUser.id}`);
   }
 };
 

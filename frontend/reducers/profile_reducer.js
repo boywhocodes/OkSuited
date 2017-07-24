@@ -5,7 +5,7 @@ const initialState = {
   errors: {}
 };
 
-const ProfileReducer = (state, initialState, action) => {
+const ProfileReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_PROFILE:

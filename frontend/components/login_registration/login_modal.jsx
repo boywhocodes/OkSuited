@@ -22,7 +22,7 @@ class LogInModal extends React.Component {
     this.props.login(user).then(user => {
       this.setState({ username: "", password: "" });
       this.props.closeLogInModal();
-      this.props.history.push('/profile')
+      this.props.history.push(`/profile/${user.id}`)
     });
   }
 

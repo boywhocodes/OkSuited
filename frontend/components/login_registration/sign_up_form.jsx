@@ -77,7 +77,7 @@ class SignUpForm extends React.Component {
           value={this.state.username}
           onChange={this.update("username")}
           placeholder="Username"
-          className="step-two-box"
+          className="sign-up-username-box"
           />
 
 
@@ -86,9 +86,9 @@ class SignUpForm extends React.Component {
         value={this.state.password}
         onChange={this.update("password")}
         placeholder="Password"
-        className="step-two-box"
+        className="sign-up-username-box"
         />
-      <input type="submit" value="Start Eating!" className="start-eating-button"/>
+      <input type="submit" value="Start Eating!" className="start-password-button"/>
       </form>
 
     );

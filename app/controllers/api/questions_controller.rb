@@ -1,7 +1,7 @@
 class Api::QuestionsController < ApplicationController
 
   def index
-    @questions = Question.includes(choices)
+    @questions = Question.includes(:choices)
 
     if @questions
       render :index
