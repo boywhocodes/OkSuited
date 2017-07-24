@@ -6,12 +6,14 @@ const initialState = {
 };
 
 const ResponseReducer = (state = initialState, action) => {
-  Object.freeze;
+  Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SINGLE_RESPONSE:
       return { currentResponse: action.response };
     case RECEIVE_RESPONSES:
-      return { responses: {action.responses} };
+      return { responses: action.responses };
+    default:
+        return state;
   }
 }
 

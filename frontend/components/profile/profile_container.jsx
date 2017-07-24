@@ -8,8 +8,8 @@ import { fetchResponses } from '../../actions/response_actions';
 const mapStateToProps = state => ({
   profile: state.currentProfile.currentProfile,
   currentUser: state.session.currentUser,
-  // questions: state.questions.questions,
-  // responses: state.responses.responses
+  questions: state.question.questions,
+  responses: state.response.responses
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

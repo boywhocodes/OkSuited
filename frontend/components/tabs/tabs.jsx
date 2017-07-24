@@ -1,5 +1,6 @@
 import React from 'react';
 import EssayContainer from '../profile/essay_container';
+import QuestionsContainer from '../question/questions_container';
 
 class Tabs extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class Tabs extends React.Component {
     return (
       <div>
         <div className="profile-tabs-container">
-          <ul>
+          <ul className={this.props.styling + " tab group"}>
             {this.tabArray()}
           </ul>
         </div>

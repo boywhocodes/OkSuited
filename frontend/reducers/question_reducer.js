@@ -11,7 +11,7 @@ const QuestionReducer = (state = initialState, action) => {
     case RECEIVE_CURRENT_QUESTION:
       return { currentQuestion: action.question };
     case RECEIVE_QUESTIONS:
-      return { questions: {action.questions} };
+      return { questions: action.questions };
     default:
     return state;
   }

@@ -1,7 +1,12 @@
 class Api::ResponsesController < ApplicationController
 
   def index
-    @responses = Response.includes(:question).where("user_id = ?", response_params[:user_id])
+    if params["user_id"]
+      @responses = Response.includes(:question).where(user_id: params['user_id'])
+    else
+      @responses = Response.all
+    end
+    # @responses = Response.includes(:question).where("user_id = ?", params[:user_id])
   end
 
   def create

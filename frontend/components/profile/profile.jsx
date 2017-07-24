@@ -70,34 +70,35 @@ class Profile extends React.Component {
   }
 
   render() {
-    return<div/>
+
     if (!this.props.profile || !this.props.currentUser) {
       return <div></div>
     } else {
       return(
         <main className="profile-main">
-          <div className="profile-header">
-            <div className="inner-header-group">
-              <div className="user-info-group">
-                <div className="user-thumb">
-                  {this.profilePic()}
-                </div>
-                <div className="user-basics-group">
-                  <h2 className="user-name">
-                    {this.props.profile.username}}
-                  </h2>
-                  <h3 className="user-details">
-                    {this.props.profile.age} • {this.props.profile.eating_speed} • {this.props.profile.gender} • {this.props.profile.location}
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
           <TabsContainer
             tabs={ [ <EssayContainer />, <QuestionsContainer questions={this.props.questions} /> ] }
-            tabNames={ ["About", "Questions"] }
+            tabNames={ ["Attbout", "Questions"] }
             styling="profile-tabs" />
         </main>
+        //   <div className="profile-header">
+        //     <div className="inner-header-group">
+        //       <div className="user-info-group">
+        //         <div className="user-thumb">
+        //           {this.profilePic()}
+        //         </div>
+        //         <div className="user-basics-group">
+        //           <h2 className="user-name">
+        //             {this.props.profile.username}}
+        //           </h2>
+        //           <h3 className="user-details">
+        //             {this.props.profile.age} • {this.props.profile.eating_speed} • {this.props.profile.gender} • {this.props.profile.location}
+        //           </h3>
+        //         </div>
+        //       </div>
+        //     </div>
+        //   </div>
+
       );
     }
   }

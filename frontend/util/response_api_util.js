@@ -9,7 +9,7 @@ export const fetchResponses = (user_id) => {
   return $.ajax({
     method: 'GET',
     url: 'api/responses',
-    data: {  response: {user_id} }
+    data: {user_id}
   });
 };
 
