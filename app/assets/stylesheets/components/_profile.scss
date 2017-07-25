@@ -1,6 +1,26 @@
-.user-name {
-  font-size: 90px;
+.profile-main {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
+
+.user-name {
+  font-size: 40px;
+  
+}
+.user-details {
+
+
+  font-size: 20px;
+
+}
+
+// .user-header {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   width: 100%;
+//   height: 100vh;
+// }

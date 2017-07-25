@@ -97,7 +97,8 @@ class Profile extends React.Component {
           <TabsContainer
             tabs={ [ <EssayContainer />, <QuestionsContainer /> ] }
             tabNames={ ["Attbout", "Questions"] }
-            styling="profile-tabs" />
+            styling="profile-tabs"
+            className="tabs-box"/>
         </main>
       );
     }
