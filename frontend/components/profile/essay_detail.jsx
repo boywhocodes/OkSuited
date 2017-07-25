@@ -26,12 +26,12 @@ class EssayDetail extends React.Component {
 
 
   componentDidMount() {
-    console.log(this.props, "props");
+    
     this.setState({ userInput: this.props.userInput   })
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps, "next");
+
     this.setState({ userInput: nextProps.userInput });
   }
 

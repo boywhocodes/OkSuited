@@ -1,0 +1,65 @@
+.nav-bar {
+  background-color: #709996;
+  font-family: 'Bellefair', serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-logo {
+  transition: 1s;
+  background-color: white;
+  color: blue;
+  font-size: 28px;
+  display: inline;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 38px;
+}
+
+.nav-logo:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.nav-profile-pic {
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px;
+  border-radius: 60px;
+}
+
+.nav-left-link {
+  transition: 1s;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid black;
+
+  font-size: 18px;
+  padding: 4px;
+  background-color: white;
+  color: #FF6953;
+  box-shadow: 1px 1px 1px;
+}
+
+.nav-left-link:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.nav-logout-link {
+  transition: 1s;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid black;
+
+  font-size: 18px;
+  padding: 4px;
+  background-color: white;
+  color: #FF6953;
+  box-shadow: 1px 1px 1px;
+}
+
+.nav-logout-link:hover {
+  background-color: transparent;
+  color: white;
+}

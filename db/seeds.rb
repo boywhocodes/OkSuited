@@ -13,6 +13,7 @@ user1 = User.create!({
   gender: "male",
   eating_speed: "Averaged Paced Eating",
   summary: "This is a test summary"
+  
   })
 
   q1 = Question.create(title: "What's your favorite style of cuisine?")

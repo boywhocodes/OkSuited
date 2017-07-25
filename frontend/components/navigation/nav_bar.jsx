@@ -23,7 +23,7 @@ class Navbar extends React.Component {
         <nav className="nav-bar">
           <div>
             <h1 className="nav-logo">
-              <a href="/">OkSuited</a>
+              <a href="/">OkS</a>
             </h1>
             <ul className="nav-left">
               <li className="nav-left-link">
@@ -34,11 +34,11 @@ class Navbar extends React.Component {
           <div>
             <ul className="nav-right">
               <li className="nav-right-link">
-                <a href={"#/profile/"+this.props.currentUser.id}>
+                <a href={"#/profile/"+this.props.currentUser.id}>Pic
                   <img src={this.props.currentUser.image_file_name} className="nav-profile-pic"/>
                 </a>
               </li>
-              <li className="nav-right-link">
+              <li className="nav-logout-link">
                 <button onClick={this.handleLogOut}>Log Out</button>
               </li>
             </ul>
