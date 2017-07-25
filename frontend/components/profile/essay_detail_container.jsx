@@ -1,6 +1,6 @@
 import {  connect } from 'react-redux';
 import {  fetchCurrentProfile, updateProfile } from '../../actions/profile_actions';
-import Essay from './essay';
+import EssayDetail from './essay_detail';
 
 const mapStateToProps = state => ({
   profile: state.currentProfile.currentProfile,
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(
   mapStateToProps, mapDispatchToProps
-)(Essay);
+)(EssayDetail);

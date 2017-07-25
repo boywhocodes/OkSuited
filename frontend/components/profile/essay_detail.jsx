@@ -24,11 +24,14 @@ class EssayDetail extends React.Component {
 
   }
 
+
   componentDidMount() {
-    this.setState({ userInput: nextProps.userInput });
+    console.log(this.props, "props");
+    this.setState({ userInput: this.props.userInput   })
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps, "next");
     this.setState({ userInput: nextProps.userInput });
   }
 
@@ -51,6 +54,7 @@ class EssayDetail extends React.Component {
   }
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({ userInput: e.currentTarget.value });
   }
 
@@ -96,6 +100,7 @@ class EssayDetail extends React.Component {
           value={ this.state.userInput } />
 
           <input type="submit" value="Save" className="save-button" onClick={ this.handleUpdate }/ >
+            <br/>
           <input type="submit" value="Cancel" className="cancel-button" onClick={ this.handleCancel } />
 
       </form>

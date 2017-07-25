@@ -23,14 +23,14 @@ class Tabs extends React.Component {
 
     return (
       this.props.tabNames.map((tab, idx) => {
-        if(this.state.selectedIndex === idx) {
+        
           return (
             <li key={idx} onClick={() => this.handleClick(idx) }>
               <p>{tab}</p>
             </li>
           );
 
-        }
+
       })
     );
   }

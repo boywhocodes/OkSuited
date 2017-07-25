@@ -3,11 +3,12 @@ import { fetchResponses } from '../../actions/response_actions';
 import { fetchQuestions } from '../../actions/question_actions';
 import Questions from './questions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   profile: state.currentProfile.currentProfile,
-  questions: state.questions.questions,
-  responses: state.responses.responses
+  questions: state.question.questions,
+  questionId: ownProps.questionId,
+  responses: state.response.responses
 });
 
 const mapDispatchToProps = dispatch => ({

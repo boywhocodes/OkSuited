@@ -1,10 +1,13 @@
 import { connect } from 'react-redux';
-import { createResponse } from '../../actions/response_actions';
+import { createResponse, fetchResponses } from '../../actions/response_actions';
+import { fetchQuestions } from '../../actions/question_actions';
 import QuestionForm from './question_form';
+
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  responses: state.responses.responses
+  responses: state.response.responses,
+  questions: state.question.questions
 });
 
 const mapDispatchToProps = dispatch => ({

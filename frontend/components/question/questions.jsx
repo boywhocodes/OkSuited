@@ -9,12 +9,12 @@ class Questions extends React.Component {
 
     };
 
-    this.answeredQuestions = this.answeredQuestions.bind(this);
-    this.answeredQuestionsRender = this.answeredQuestionsRender.bind(this);
-    this.responseIdArray = this.responseIdArray.bind(this);
-    this.responseAcceptableArray = this.responseAcceptableArray.bind(this);
-    this.questionFormRender = this.questionFormRender.bind(this);
-    this.questionsFormHeader = this.questionsFormHeader.bind(this);
+    // this.answeredQuestions = this.answeredQuestions.bind(this);
+    // this.answeredQuestionsRender = this.answeredQuestionsRender.bind(this);
+    // this.responseIdArray = this.responseIdArray.bind(this);
+    // this.responseAcceptableArray = this.responseAcceptableArray.bind(this);
+    // this.questionFormRender = this.questionFormRender.bind(this);
+    // this.questionsFormHeader = this.questionsFormHeader.bind(this);
   }
 
   answeredQuestions() {
@@ -49,8 +49,9 @@ class Questions extends React.Component {
     const answeredQuestions = this.answeredQuestions().map((question) => {
       const questionAnswers = this.props.questions[question.id].choices;
 
-      const answerDisplay = questionAnswer.map((choice) => {
-        if (this.responseIdArray().includes(choice_id)) {
+
+      const answerDisplay = questionAnswers.map((choice) => {
+        if (this.responseIdArray().includes(choice.id)) {
           return <p key={choice.id} className="question-answer-match-response">{choice.body + " ✓"}</p>;
         } else if (this.responseAcceptableArray(question.id).includes(choice.body)) {
           return <p key={choice.id} className="question-answer-match-response">{choice.body}</p>;
@@ -87,7 +88,8 @@ class Questions extends React.Component {
 
   questionFormRender() {
     if (this.props.profile.id === this.props.currentUser.id) {
-      return <QuestionFormContainer questions={this.props.questions} />;
+
+      return( <QuestionFormContainer questions={this.props.questions} />);
     } else {
       return <div></div>;
     }

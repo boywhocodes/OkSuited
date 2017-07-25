@@ -79,7 +79,7 @@ class QuestionForm extends React.Component {
   questionStack() {
     if (this.props.questions) {
       const unchoiced = Object.keys(this.props.questions).map((question) => {
-        if (this.choicedQuestions().incudes(parseInt(question))) {
+        if (this.choicedQuestions().includes(parseInt(question))) {
           return;
         } else {
           return this.props.questions[question];
