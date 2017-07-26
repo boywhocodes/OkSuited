@@ -8,7 +8,7 @@ import ResponseReducer from './response_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
-  currentProfile: ProfileReducer,
+  currentProfile: ProfileReducer, //nested twice seen in reducer
   users: UserReducer,
   question: QuestionReducer,
   response: ResponseReducer,

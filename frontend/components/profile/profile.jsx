@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import EssayContainer from './essay_container';
+import {updateProfile} from '../../actions/profile_actions';
 import TabsContainer from '../tabs/tabs_container';
 import QuestionsContainer from '../question/questions_container';
-import merge from 'lodash/merge';
+import merge from 'lodash';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -48,8 +49,9 @@ class Profile extends React.Component {
             imageUrl: cloud_url
           });
           const user = this.props.profile;
-          const updatedUser = merge(user, {image_file_name: cloud_url});
-          this.props.updateProfile(updatedUser);
+          console.log(user, "lojih");
+          const updatedUser = {user: merge(user, {image_file_name: cloud_url})};
+          this.props.updateProfile(updatedUser.id);
         }
       }
     );
@@ -89,11 +91,14 @@ class Profile extends React.Component {
                   </h2>
                   </div>
                 </div>
+
                 <div className="user-details">
                   <span className="user-dete-age">Age: {this.props.profile.age}</span>
-                  <span className="user-dete-age">Eating Speed: {this.props.profile.eating_speed}</span>
-                  <span className="user-dete-age">Gender: {this.props.profile.gender}</span>
-                  <span className="user-dete-age">Location: {this.props.profile.location}</span>
+                  <span className="user-dete-speed">Eating Speed: {this.props.profile.eating_speed}</span>
+                  <span className="user-dete-gen">Gender: {this.props.profile.gender}</span>
+                  <span className="user-dete-loc">Location: {this.props.profile.location}</span>
+
+
               </div>
             </div>
           </div>

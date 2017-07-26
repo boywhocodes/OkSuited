@@ -25,18 +25,28 @@
   color: #709996;
   font-family: 'Bellefair', serif;
 }
-.user-details {
 
+.user-details {
   font-family: 'Bellefair', serif;
   font-size: 25px;
   color: #709996;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   flex-direction: column;
   margin-right: 39px;
 }
-.dot {
-  color: #FF6953;
+.user-dete-age {
+  margin-bottom: 20px;
+}
+.user-dete-speed {
+  margin: 20px;
+}
+.user-dete-gen {
+  margin: 20px;
+}
+.user-dete-loc {
+  margin-top: 20px;
 }
 
 .profile-pic {

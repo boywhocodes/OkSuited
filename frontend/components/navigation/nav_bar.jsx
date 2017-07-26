@@ -34,7 +34,7 @@ class Navbar extends React.Component {
           <div>
             <ul className="nav-right">
               <li className="nav-right-link">
-                <a href={"#/profile/"+this.props.currentUser.id}>Pic
+                <a href={"#/profile/"+this.props.currentUser.id}>
                   <img src={this.props.currentUser.image_file_name} className="nav-profile-pic"/>
                 </a>
               </li>

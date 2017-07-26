@@ -1,4 +1,5 @@
 import { RECEIVE_CURRENT_PROFILE, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/profile_actions';
+import { merge } from 'lodash';
 
 const initialState = {
   currentProfile: null,
@@ -6,10 +7,11 @@ const initialState = {
 };
 
 const ProfileReducer = (state = initialState, action) => {
+  console.log(";lk");
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_PROFILE:
-      return { currentProfile: action.user, errors: {} };
+      return {currentProfile:action.user, errors: {} }; //now currProf is not nested
     case RECEIVE_ERRORS:
       return { currentProfile: null, errors: action.errors };
     case CLEAR_ERRORS:
