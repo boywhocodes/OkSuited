@@ -61,6 +61,7 @@ class Questions extends React.Component {
       });
 
       return (
+        
         <div className="answered-question" key={ question.id }>
           <div className="question-content">
             <div className="question-content-title">

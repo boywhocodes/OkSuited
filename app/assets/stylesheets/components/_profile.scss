@@ -5,14 +5,18 @@
 .profile-main {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+
   width: 100%;
+  flex-direction: column;
   // height: 100vh;
 }
 
+
 .user-info-group {
-  margin-top: 300px;
+  margin-top: 100px;
   margin-right: 50px;
+  margin-left: 50px;
+
 }
 
 
@@ -27,7 +31,9 @@
   font-size: 25px;
   color: #709996;
   display: flex;
+  align-items: flex-end;
   flex-direction: column;
+  margin-right: 39px;
 }
 .dot {
   color: #FF6953;

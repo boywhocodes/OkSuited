@@ -15,19 +15,19 @@
 }
 .profile-tabs.tab.group > li {
   display: flex;
-  margin-left: 12px;
-  margin-top: 30px;
+  margin-left: 92px;
+  // margin-top: -92px;
 border-bottom: 1px solid;
-font-size: 34px;
+font-size: 24px;
 display: flex;
 justify-content: space-between;
 width: 100%;
-position: fixed;
-  width: 100%;
-  z-index: 100;
-  height: 65px;
 }
 .profile-tabs.tab.group > li > p:hover {
   color: #FF6953;
+  cursor: pointer;
+}
+.profile-tabs.tab.group > li > p:active {
+  color: blue;
   cursor: pointer;
 }

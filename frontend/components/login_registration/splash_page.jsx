@@ -34,8 +34,8 @@ class SplashPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "54321", password: "123456"}).then(user => {
-      this.props.history.push('/profile');
+    this.props.login({ username: "54321", password: "123456"}).then(userAction => {
+      this.props.history.push(`/profile/${userAction.currentUser.id}`);
     });
   }
 
@@ -52,7 +52,7 @@ class SplashPage extends React.Component {
           <div className="background-group">
                   <div className="splash-header-group" >
                             <div className="signin-header">
-                              
+
                               <button className="login-button" onClick={this.handleClick} >
                                 Log In
                               </button>

@@ -26,7 +26,7 @@ class Tabs extends React.Component {
 
           return (
             <li key={idx} onClick={() => this.handleClick(idx) }>
-              <p className="tab">{tab}</p>
+              <p className="tab you-are-here">{tab}</p>
             </li>
           );
 

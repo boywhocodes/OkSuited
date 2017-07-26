@@ -87,13 +87,13 @@ class Profile extends React.Component {
                   <h2 className="user-name">
                     {this.props.profile.username}
                   </h2>
-                  <div className="user-details">
-                    <span className="user-dete-age">Age: {this.props.profile.age}</span>  
-                    <span className="user-dete-age">Eating Speed: {this.props.profile.eating_speed}</span>
-                    <span className="user-dete-age">Gender: {this.props.profile.gender}</span>
-                    <span className="user-dete-age">Location: {this.props.profile.location}</span>
                   </div>
                 </div>
+                <div className="user-details">
+                  <span className="user-dete-age">Age: {this.props.profile.age}</span>
+                  <span className="user-dete-age">Eating Speed: {this.props.profile.eating_speed}</span>
+                  <span className="user-dete-age">Gender: {this.props.profile.gender}</span>
+                  <span className="user-dete-age">Location: {this.props.profile.location}</span>
               </div>
             </div>
           </div>
