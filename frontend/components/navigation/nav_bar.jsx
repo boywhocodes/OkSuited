@@ -22,9 +22,11 @@ class Navbar extends React.Component {
       return(
         <nav className="nav-bar">
           <div>
+            <div className="nav-logo-class">
             <h1 className="nav-logo">
               <a href="/">OkS</a>
             </h1>
+            </div>
             <ul className="nav-left">
               <li className="nav-left-link">
                 <a href="/">Browse Matches</a>
@@ -38,9 +40,11 @@ class Navbar extends React.Component {
                   <img src={this.props.currentUser.image_file_name} className="nav-profile-pic"/>
                 </a>
               </li>
+              <div className="nav-logout-class">
               <li className="nav-logout-link">
                 <button onClick={this.handleLogOut}>Log Out</button>
               </li>
+              </div>
             </ul>
           </div>
         </nav>

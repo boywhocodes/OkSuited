@@ -186,9 +186,10 @@ class QuestionForm extends React.Component {
               type="radio"
               checked={ this.state.importance == 50 }
               onClick={ this.handleImportance } />
-            <div className="importance-radios-group"></div>
+            <div className="importance-bar"></div>
             Very
           </label>
+          <div className="importance-radios-group"></div>
         </div>
       </div>
     );

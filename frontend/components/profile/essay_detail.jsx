@@ -48,7 +48,7 @@ class EssayDetail extends React.Component {
 
     const user = Object.assign({}, this.props.profile, updatedDetail);
 
-    this.props.updateProfile(user).then(() => {
+    this.props.updateProfile({user}).then(() => {
       this.setState({ edit: false });
     });
   }
@@ -82,7 +82,7 @@ class EssayDetail extends React.Component {
 
         <span className="essay-title">{this.props.detailTitle}</span>
         <button className="essay-button" onClick={ this.handleClick }>
-          <span className="essay-edit-pencil">Sym</span>
+          <span className="essay-edit-pencil">Edit</span>
         </button>
 
       </div>

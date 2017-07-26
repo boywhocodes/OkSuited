@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates :location, length: {is: 5 }
 
 	after_initialize :ensure_session_token
-	before_validation :ensure_session_token_uniqueness
+	# before_validation :ensure_session_token_uniqueness
 
 
 	def password= password

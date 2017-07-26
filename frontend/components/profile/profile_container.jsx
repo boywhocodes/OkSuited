@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  updateProfile: (id) => dispatch(updateProfile(ownProps.match.params.userId)),
+  updateProfile: (user) => dispatch(updateProfile(user)),
 
   fetchCurrentProfile: () => dispatch(fetchCurrentProfile(ownProps.match.params.userId)), //userId coming from App route
   updateImage: (formData, user) => dispatch(updateImage(formData, user)),

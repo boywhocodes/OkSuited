@@ -11,9 +11,9 @@ export const fetchCurrentProfile = user_id => {
   };
 };
 
-export const updateProfile = user_id => {
+export const updateProfile = user => {
   return (dispatch) => {
-    return APIUtil.updateProfile(user_id).then((user) => dispatch(receiveCurrentProfile(user)), (errors) => dispatch(receiveErrors(errors.responseJSON)));
+    return APIUtil.updateProfile(user).then((newUser) => dispatch(receiveCurrentProfile(newUser)), (errors) => dispatch(receiveErrors(errors.responseJSON)));
   };
 };
 

@@ -4,14 +4,19 @@ import EssayContainer from './essay_container';
 import {updateProfile} from '../../actions/profile_actions';
 import TabsContainer from '../tabs/tabs_container';
 import QuestionsContainer from '../question/questions_container';
-import merge from 'lodash';
+
 
 class Profile extends React.Component {
   constructor(props) {
     super(props);
 
+    let image_url;
+    if (props.profile) {
+      image_url = props.profile.image_url
+
+    }
     this.state = {
-      imageUrl: null
+      image_url
     };
 
     this.cloudinate = this.cloudinate.bind(this);
@@ -21,14 +26,14 @@ class Profile extends React.Component {
   componentDidMount() {
     this.props.fetchCurrentProfile().then(() => {
       this.props.fetchResponses(this.props.profile.id);
-      this.setState({ imageUrl: this.props.profile.image_file_name });
+      this.setState({ image_url: this.props.profile.image_url }, () => console.log(this.state, "stae"));
     });
     this.props.fetchQuestions();
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
-      nextProps.fetchCurrentProfile(nextProps.match.params.userId).then(() => {this.setState({ imageUrl: this.props.profile.image_file_name});
+      nextProps.fetchCurrentProfile(nextProps.match.params.userId).then(() => {this.setState({ image_url: this.props.profile.image_url});
       nextProps.fetchResponses(nextProps.profile.id)});
     }
   }
@@ -46,12 +51,12 @@ class Profile extends React.Component {
         if (errors === null) {
           let cloud_url = imageInfo[0].url;
           this.setState({
-            imageUrl: cloud_url
+            image_url: cloud_url
           });
           const user = this.props.profile;
           console.log(user, "lojih");
-          const updatedUser = {user: merge(user, {image_file_name: cloud_url})};
-          this.props.updateProfile(updatedUser.id);
+          user.image_url = cloud_url
+          this.props.updateProfile({ user });
         }
       }
     );
@@ -61,13 +66,13 @@ class Profile extends React.Component {
     if (this.props.currentUser.id === this.props.profile.id) {
       return (
         <div>
-          <img className="profile-pic" src={this.state.imageUrl} ></img>
+          <img className="profile-pic" src={this.state.image_url} ></img>
           <button className="update-image-button" onClick={this.cloudinate}>Upload Image</button>
         </div>
       );
     } else {
       return (
-        <img className="profile-pic-non-user" src={this.state.imageUrl}></img>
+        <img className="profile-pic-non-user" src={this.props.profile.image_url}></img>
       );
     }
   }

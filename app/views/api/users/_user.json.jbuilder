@@ -5,6 +5,7 @@ json.location user.location
 json.summary user.summary
 # json.responses user.responses
 # json.questions user.questions
+json.image_url user.image_url
 json.age user.age
 json.gender user.gender
 json.eating_speed user.eating_speed

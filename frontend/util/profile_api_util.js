@@ -6,14 +6,16 @@ export const fetchProfile = user_id => {
 };
 
 export const updateProfile = user => {
+
   return $.ajax({
     method: 'PATCH',
-    url: `api/users/${user.id}`,
+    url: `api/users/${user.user.id}`,
     data: user
   });
 };
 
 export const updateImage = (formData, user) => {
+  
   return $.ajax({
     method: 'PATCH',
     url: `api/users/${user.id}`,

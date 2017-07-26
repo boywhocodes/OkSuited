@@ -6,6 +6,7 @@ const StepOne = props => (
     <span className="I-am">
       I am a
     </span>
+    
     <select
       onChange={props.update("eating_speed")}
       value={props.eating_speed}

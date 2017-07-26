@@ -2,7 +2,7 @@ json.id @user.id
 json.username @user.username
 json.location @user.location
 json.summary @user.summary
-
+json.image_url @user.image_url
 json.gender @user.gender
 json.eating_speed @user.eating_speed
 json.age @user.age
