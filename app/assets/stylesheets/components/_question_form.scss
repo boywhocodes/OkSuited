@@ -1,0 +1,272 @@
+.content-questions {
+  position: relative;
+  padding-top: 30px;
+  min-height: 100%;
+  width: 1000px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.main-questions {
+  width: 560px;
+  padding-right: 50px;
+  float: left;
+  position: relative;
+
+}
+
+.answered-questions {
+  position: relative;
+  width: 100%;
+}
+
+
+.question-answer {
+  font-size:50px;
+  color: #474d59;
+  margin-top: 10px;
+}
+
+.answered-question {
+  box-shadow: 0 2px 4px rgba(148,154,166,0.35);
+  margin-bottom: 13px;
+  position: relative;
+  width: auto;
+  background: #fff;
+  border-radius: 3px;
+
+}
+
+.question-content {
+  padding-bottom: 10px;
+  padding: 30px;
+}
+
+.question-content-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+
+}
+
+
+
+.questions-header {
+  font-size:30px;
+  line-height: 22px;
+  font-weight: 600;
+font-family: 'Bellefair', serif;
+  color: #709996;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.show-questions-header {
+  font-size:20px;
+  line-height: 22px;
+  font-weight: 600;
+  font-family: 'Bellefair', serif;
+  color: #474d59;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+
+.new-question {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(148,154,166,0.35);
+  width: auto;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.question-form {
+  padding: 30px;
+  font-family: 'Bellefair', serif;
+  width: 450px;
+}
+
+.question-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+  color: #5e6573;
+}
+
+.question-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size:50px;
+  line-height: 24px;
+}
+
+.choices-container {
+}
+
+.choices-form {
+  display: block;
+  color: #5e6573;
+}
+
+.user-choices {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.radio-choice {
+  display: block;
+  vertical-align: top;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 19px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-acceptables {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.acceptables-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+.acceptables-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size:50px;
+  line-height: 24px;
+}
+
+.acceptables-choices {
+  display: block;
+  vertical-align: top;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 19px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.user-importance {
+  min-height: 90px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.importance-title {
+  margin-top: -6px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+.importance-title > p {
+  display: inline;
+  font-weight: 600;
+  font-size:50px;
+  line-height: 24px;
+}
+
+.importance-radios {
+  position: relative;
+  height: 50px;
+}
+
+.importance-radios input[type="radio"] {
+  opacity: 0;
+  z-index: -1;
+}
+
+.importance-choice {
+  position: relative;
+  width: 140px;
+  float: left;
+  margin: 0;
+  margin-right: 5px;
+  text-align: center;
+  padding: 0;
+  background: none;
+  display: block;
+  background-color: yellow;
+}
+
+.importance-choice:hover > .importance-bar {
+  background: #709996;
+}
+
+.importance-choice input[type="radio"]:checked ~ .importance-bar {
+  background: #709996;
+}
+
+.importance-bar {
+  width: 140px;
+  height: 18px;
+  margin-bottom: 8px;
+  background: #ebedf2;
+  border-radius: 4px;
+}
+
+.user-explanation {
+  margin: 0;
+  margin-top: 40px;
+}
+
+.explanation-input-container {
+  width: 235px;
+  margin-bottom: 30px;
+}
+
+.explanation-textarea {
+  height: 66px;
+  width: calc(100% - 28px);
+  display: inline-block;
+  padding: 10px;
+  padding-right: 16px;
+  background: #fff;
+  border: 1px solid #ccd0d9;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(0,0,0, .2);
+  font-size:30px;
+  line-height: 22px;
+}
+
+.answer-button {
+  background-color: white;
+  color: #FF6953;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #FF6953;
+  border-radius: 4px;
+  font-size:50px;
+  line-height: 41px;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+.answer-button:hover {
+  color: #709996;
+  background-color: white;
+  border: 1px solid #709996;
+  box-shadow: 1px 1px 1px rgba(0,0,0, .5);
+}
+
+
+.match-response {
+  color: #00d280;
+}
