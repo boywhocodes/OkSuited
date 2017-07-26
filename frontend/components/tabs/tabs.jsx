@@ -23,10 +23,10 @@ class Tabs extends React.Component {
 
     return (
       this.props.tabNames.map((tab, idx) => {
-        
+
           return (
             <li key={idx} onClick={() => this.handleClick(idx) }>
-              <p>{tab}</p>
+              <p className="tab">{tab}</p>
             </li>
           );
 
@@ -37,7 +37,7 @@ class Tabs extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="prof-tab-main">
         <div className="profile-tabs-container">
           <ul className={this.props.styling + " tab group"}>
             {this.tabArray()}

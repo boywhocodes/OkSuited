@@ -27,7 +27,8 @@ class Profile extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
-      this.props.fetchCurrentProfile(nextProps.match.params.userId).then(() => this.setState({ imageUrl: this.props.profile.image_file_name}));
+      nextProps.fetchCurrentProfile(nextProps.match.params.userId).then(() => {this.setState({ imageUrl: this.props.profile.image_file_name});
+      nextProps.fetchResponses(nextProps.profile.id)});
     }
   }
 
@@ -59,7 +60,7 @@ class Profile extends React.Component {
       return (
         <div>
           <img className="profile-pic" src={this.state.imageUrl} ></img>
-          <button className="update-image-button" onClick={this.cloudinate}>Update</button>
+          <button className="update-image-button" onClick={this.cloudinate}>Upload Image</button>
         </div>
       );
     } else {
@@ -79,16 +80,19 @@ class Profile extends React.Component {
           <div className="profile-header">
             <div className="inner-header-group">
               <div className="user-info-group">
-                <div className="user-thumb">
+                <div className="user-pic">
                   {this.profilePic()}
                 </div>
                 <div className="user-basics-group">
                   <h2 className="user-name">
-                    {this.props.profile.username}}
+                    {this.props.profile.username}
                   </h2>
-                  <h3 className="user-details">
-                    {this.props.profile.age} • {this.props.profile.eating_speed} • {this.props.profile.gender} • {this.props.profile.location}
-                  </h3>
+                  <div className="user-details">
+                    <span className="user-dete-age">Age: {this.props.profile.age}</span>  
+                    <span className="user-dete-age">Eating Speed: {this.props.profile.eating_speed}</span>
+                    <span className="user-dete-age">Gender: {this.props.profile.gender}</span>
+                    <span className="user-dete-age">Location: {this.props.profile.location}</span>
+                  </div>
                 </div>
               </div>
             </div>

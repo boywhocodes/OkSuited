@@ -1,0 +1,85 @@
+.essay-block {
+  border: 1px solid rgba(0,0,0, 0.1);
+  margin: 20px;
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(0,0,0, .5);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-family: 'Bellefair', serif;
+
+position: relative;
+-webkit-transition: all 200ms ease-in;
+-webkit-transform: scale(1);
+-ms-transition: all 200ms ease-in;
+-ms-transform: scale(1);
+-moz-transition: all 200ms ease-in;
+-moz-transform: scale(1);
+transition: all 200ms ease-in;
+transform: scale(1);
+
+}
+
+.essay-block:hover{
+
+  box-shadow: 0px 0px 20px rgba(0,0,0, .5);
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.09);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.09);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.09);
+  transition: all 200ms ease-in;
+  transform: scale(1.09);
+
+}
+
+.essay-title {
+  font-size: 23px;
+  color: #709996;
+  margin-top: 12px;
+  padding: 9px;
+  font-family: 'Bellefair', serif;
+}
+
+.placeholder-text {
+  padding: 12px;
+  color: lightgray;
+}
+
+.essay-text {
+  padding: 12px;
+}
+
+.edit-text-inside {
+  background-color: white;
+  color: #100e8c;
+}
+
+
+.save-button {
+  color: #FF6953;
+  display: flex;
+
+  transition: 1s;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  text-align: center;
+  padding: 4px;
+  background-color: white;
+  // background-color: rgba(0,0,0, 0.1);
+  box-shadow: 1px 1px 1px;
+}
+
+.save-button:hover {
+  background-color: #709996;
+  color: white;
+}
+
+.cancel-button {
+  color: #FF6953;
+  background-color: white;
+}

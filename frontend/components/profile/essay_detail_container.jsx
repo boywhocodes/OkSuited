@@ -11,7 +11,8 @@ const mapStateToProps = state => ({
   daytime: state.currentProfile.daytime,
   hobbies: state.currentProfile.hobbies,
   friday: state.currentProfile.friday,
-  message_if: state.currentProfile.message_if
+  message_if: state.currentProfile.message_if,
+  
 });
 
 const mapDispatchToProps = dispatch => ({

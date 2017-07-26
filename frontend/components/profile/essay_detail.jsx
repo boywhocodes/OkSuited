@@ -26,7 +26,7 @@ class EssayDetail extends React.Component {
 
 
   componentDidMount() {
-    
+
     this.setState({ userInput: this.props.userInput   })
   }
 
@@ -80,9 +80,9 @@ class EssayDetail extends React.Component {
     return(
       <div>
 
+        <span className="essay-title">{this.props.detailTitle}</span>
         <button className="essay-button" onClick={ this.handleClick }>
-          <span className="essay-title">{this.props.detailTitle}</span>
-          <span className="essay-edit-pencil"></span>
+          <span className="essay-edit-pencil">Sym</span>
         </button>
 
       </div>
@@ -131,7 +131,7 @@ class EssayDetail extends React.Component {
   }
 
   currentText() {
-    if (!this.state.edit) {
+    if (this.state.edit) {
       return this.editText();
     } else {
       return this.normalText();

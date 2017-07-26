@@ -1,3 +1,7 @@
+.behind-everything {
+  background-image: url(https://static.pexels.com/photos/503175/pexels-photo-503175.jpeg);
+
+}
 .profile-main {
   display: flex;
   justify-content: center;
@@ -6,19 +10,57 @@
   // height: 100vh;
 }
 
+.user-info-group {
+  margin-top: 300px;
+  margin-right: 50px;
+}
+
+
 .user-name {
   font-size: 40px;
-
+  color: #709996;
+  font-family: 'Bellefair', serif;
 }
 .user-details {
 
+  font-family: 'Bellefair', serif;
+  font-size: 25px;
+  color: #709996;
+  display: flex;
+  flex-direction: column;
+}
+.dot {
+  color: #FF6953;
+}
 
-  font-size: 20px;
+.profile-pic {
+
+    position: relative;
+    margin-top: 17px;
+    margin-left: 17px;
+    height: 160px;
+    width: 160px;
+    border: 5px solid #FFFFFF;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
 
 }
 
+
 .tabs-box {
   font-size: 90px;
-  justify-content: space-around;
-  align-items: baseline;
+
+}
+
+.profile-tabs {
+  margin-top: 20px;
+  border-bottom: 1px solid;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

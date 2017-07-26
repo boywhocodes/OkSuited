@@ -17,22 +17,22 @@ import {
 } from 'react-router-dom';
 
 
-const App = () => {
+const App = ({store}) => {
 
-const _ensureLoggedIn = (nextState, replace) => {
-  const currentUser = store.getState().session.currentUser;
-  if (!currentUser) {
-    replace('/signup');
-  }
-};
-
-const _redirectIfLoggedIn = (nextState, replace) => {
-  const currentUser = store.getState().session.currentUser;
-  if (currentUser) {
-    replace('/profile/:userId');
-  }
-};
-
+// const _ensureLoggedIn = (nextState, replace) => {
+//   const currentUser = store.getState().session.currentUser;
+//   if (!currentUser) {
+//     replace('/signup');
+//   }
+// };
+//
+// const _redirectIfLoggedIn = (nextState, replace) => {
+//   const currentUser = store.getState().session.currentUser;
+//   if (currentUser) {
+//     replace('/profile/:userId');
+//   }
+// };
+  const behind = store.getState().session.currentUser ? "behind-everything" : "behind-everything logged-out"
   return (
     <div>
 
@@ -40,8 +40,7 @@ const _redirectIfLoggedIn = (nextState, replace) => {
       <NavbarContainer />
     </header>
 
-
-    <div className="behind-everything">
+    <div className={behind}>
 
       <Route exact path="/profile/:userId" component={ProfileContainer} />
     <Route exact path="/" component={SplashPageContainer} />

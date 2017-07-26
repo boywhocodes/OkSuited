@@ -1,6 +1,33 @@
+.prof-tab-main {
+  width: 75%;
+}
+
 .profile-tabs-container {
   font-size: 30px;
   display: flex;
 
   color: #709996;
+}
+
+.profile-tabs.tab.group {
+  display: flex;
+
+}
+.profile-tabs.tab.group > li {
+  display: flex;
+  margin-left: 12px;
+  margin-top: 30px;
+border-bottom: 1px solid;
+font-size: 34px;
+display: flex;
+justify-content: space-between;
+width: 100%;
+position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 65px;
+}
+.profile-tabs.tab.group > li > p:hover {
+  color: #FF6953;
+  cursor: pointer;
 }
