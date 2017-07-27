@@ -6,8 +6,9 @@ class UserIndex extends React.Component {
   constructor(props) {
     super(props);
 
+
     this.state = {
-      distance = 0
+      distance: 0
     };
     this.display = this.display.bind(this);
     this.sortedUsers = this.sortedUsers.bind(this);
@@ -30,22 +31,22 @@ class UserIndex extends React.Component {
 
 
 
-  preferences() {
-    let eating_partner;
-
-    if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "male") {
-      eating_partner = "slow-eating-male";
-    } else if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "female") {
-      eating_partner = "slow-eating-female";
-    } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "male") {
-      eating_partner = "medium-eating-male";
-    } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "female") {
-      eating_partner = "medium-eating-female";
-    } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "male") {
-      eating_partner = "fast-eating-male";
-    } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "female") {
-      eating_partner = "fast-eating-female";
-    }
+  // preferences() {
+  //   let eating_partner;
+  //
+  //   if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "male") {
+  //     eating_partner = "slow-eating-male";
+  //   } else if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "female") {
+  //     eating_partner = "slow-eating-female";
+  //   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "male") {
+  //     eating_partner = "medium-eating-male";
+  //   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "female") {
+  //     eating_partner = "medium-eating-female";
+  //   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "male") {
+  //     eating_partner = "fast-eating-male";
+  //   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "female") {
+  //     eating_partner = "fast-eating-female";
+  //   }
 
 
 
@@ -194,7 +195,6 @@ class UserIndex extends React.Component {
       return null;
     }
 
-    // const { children } = this.props;
     return (
       <div className="browse-main">
         {this.preferences()}
@@ -202,7 +202,6 @@ class UserIndex extends React.Component {
           <ul className="user-index-group">
             {this.display()}
           </ul>
-          // {children}
         </div>
       </div>
     );
@@ -210,3 +209,6 @@ class UserIndex extends React.Component {
 }
 
 export default withRouter(UserIndex);
+
+// const { children } = this.props;
+// {children}

@@ -6,7 +6,17 @@ const StepOne = props => (
     <span className="I-am">
       I am a
     </span>
-    
+<div className="all-selects">
+  <div className="select-group">
+    <span className="select-eat-speed">
+      select your eating speed
+    </span>
+
+    <span className="select-gender">
+      select your gender
+    </span>
+  </div>
+    <div className="buttons">
     <select
       onChange={props.update("eating_speed")}
       value={props.eating_speed}
@@ -26,6 +36,8 @@ const StepOne = props => (
       <option value="genderfluid">Genderfluid</option>
       <option value="notspecified">Not Specified</option>
     </select>
+    </div>
+  </div>
     <h1 className="exclamation">!</h1>
     <div className="continue-button"><input type="submit" value="Continue"  /></div>
   </form>

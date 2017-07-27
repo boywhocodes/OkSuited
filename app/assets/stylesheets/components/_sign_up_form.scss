@@ -1,4 +1,26 @@
+.user-pass-form {
+  font-family: sans-serif;
+  color: #FF6953;
+  display: flex;
+justify-content: center;
+align-items: baseline;
+margin-top: 60px;
 
+}
+
+.u-name {
+  font-family: 'Bellefair', serif;
+  color: #709996;
+  padding: 9px;
+  font-size: 23px;
+}
+
+.p-word {
+  font-family: 'Bellefair', serif;
+  color: #709996;
+  padding: 9px;
+  font-size: 23px;
+}
 
 .sign-up-username-box {
   transition: 1s;
@@ -12,15 +34,37 @@
   height: 60px;
   margin-right: 5px;
   font-family: 'Bellefair', serif;
-  background-color: #709996;
-  color: white;
+  background-color: white;
+  color: #709996;
   border: 0px;
   outline: 0px;
   padding: 0 20px;
   box-shadow: 0 1px 3px #142a5d;
+  border-radius: 4px;
 }
 
-.sign-up-password-box
+
+
+.sign-up-password-box {
+  transition: 1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 25px;
+  width: 180px;
+  height: 60px;
+  margin-right: 5px;
+  font-family: 'Bellefair', serif;
+  background-color: white;
+
+  border: 0px;
+  outline: 0px;
+  padding: 0 20px;
+  box-shadow: 0 1px 3px #142a5d;
+  border-radius: 4px;
+}
 
 .start-eating-button {
   transition: 1s;
@@ -30,7 +74,7 @@
   font-size: 20px;
 margin: 5px;
   text-align: center;
-
+  font-family: 'Bellefair', serif;
   padding: 7px;
   background-color: white;
   color: #FF6953;

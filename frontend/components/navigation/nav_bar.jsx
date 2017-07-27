@@ -29,7 +29,7 @@ class Navbar extends React.Component {
             </div>
             <ul className="nav-left">
               <li className="nav-left-link">
-                <a href="/">Browse Matches</a>
+                <a href="/#/profile">Browse Matches</a>
               </li>
             </ul>
           </div>

@@ -12,6 +12,23 @@
   color: #709996;
   text-size: 40px;
 }
+.all-selects {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.select-group {
+  margin-top: 5px;
+  font-size: 23px;
+  font-family: 'Bellefair', serif;
+  color: #FF6953;
+}
+.select-eat-speed {
+  padding: 4px;
+}
+
+.select-gender {
+  padding: 20px;
+}
 
 .step-one-buttons-eat-speed {
   transition: 1s;
@@ -26,8 +43,8 @@
   margin-right: 15px;
   margin-left: 5px;
   font-family: 'Bellefair', serif;
-  background-color: #709996;
-  color: white;
+  background-color: rgba(0,0,0,0.1);
+  color: #709996;
   border: 0px;
   outline: 0px;
   padding: 0 10px;
@@ -40,7 +57,7 @@
 
 .step-one-buttons-eat-speed:hover {
   background-color: transparent;
-  color: #709996;
+  color: #FF6953;
 
 }
 
@@ -57,8 +74,8 @@
   height: 60px;
   margin-right: 5px;
   font-family: 'Bellefair', serif;
-  background-color: #709996;
-  color: white;
+  background-color: rgba(0,0,0,0.1);
+  color: #709996;
   border: 0px;
   outline: 0px;
   padding: 0 20px;

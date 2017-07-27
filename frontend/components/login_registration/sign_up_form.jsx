@@ -78,9 +78,10 @@ class SignUpForm extends React.Component {
   render () {
 
     return (
+      <div className="user-pass-form">
       <form onSubmit={ this.handleSubmit }>
         {this.renderErrors()}
-        <label>Username</label>
+        <label className="u-name">Username</label>
         <input type="text"
           value={this.state.username}
           onChange={this.update("username")}
@@ -89,15 +90,16 @@ class SignUpForm extends React.Component {
           />
 
 
-      <label>Password</label>
+        <label className="p-word">Password</label>
       <input type="password"
         value={this.state.password}
         onChange={this.update("password")}
         placeholder="Password"
-        className="sign-up-username-box"
+        className="sign-up-password-box"
         />
-      <input type="submit" value="Start Eating!" className="start-password-button"/>
+      <input type="submit" value="Start Eating!" className="start-eating-button"/>
       </form>
+      </div>
 
     );
   }
