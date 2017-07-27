@@ -9,7 +9,7 @@ class Api::UsersController < ApplicationController
 
 			@users = User.where("eating_speed like '%#{eating_speed}%'")
 									 .where("age >= #{age}")
-									 .where("gender == '%#{location}%'")
+									 .where("gender like '%#{gender}%'")
 									 .where.not(id: current_user.id)
 
 		else

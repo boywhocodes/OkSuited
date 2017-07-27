@@ -3,6 +3,7 @@ import React from 'react';
 //form for selecting options in dropdown style occuring on index page
 const StepOne = props => (
   <form onSubmit={props.submit} className="step-one-form">
+    <div className="I-am-selects">
     <span className="I-am">
       I am a
     </span>
@@ -37,6 +38,7 @@ const StepOne = props => (
       <option value="notspecified">Not Specified</option>
     </select>
     </div>
+  </div>
   </div>
     <h1 className="exclamation">!</h1>
     <div className="continue-button"><input type="submit" value="Continue"  /></div>

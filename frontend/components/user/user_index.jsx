@@ -24,8 +24,10 @@ class UserIndex extends React.Component {
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
     this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
     this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
-    this.ageSearch = this.ageSearch.bind(this);
+    this.matchSearch = this.matchSearch.bind(this);
     this.updateAge = this.updateAge.bind(this);
+    this.updateEatingSpeed = this.updateEatingSpeed.bind(this);
+    this.updateGender = this.updateGender.bind(this);
   }
 
 
@@ -51,28 +53,30 @@ class UserIndex extends React.Component {
     this.setState({ gender: e.currentTarget.value })
   }
 
-
-  ageSearch() { return (
-    <form className="age-form" onSubmit={ (e) =>{
-        e.preventDefault();
-        this.props.fetchUsersSearch(this.state)}}>
-
-        <input type="number" min="0" onChange={ this.updateAge }> </input>
-      <input
-        type="submit">
-      </input>
-    </form>
-  )
-}
-
+//
+//   ageSearch() { return (
+//     <form className="age-form" onSubmit={ (e) =>{
+//         e.preventDefault();
+//         this.props.fetchUsersSearch(this.state)}}>
+//
+//       <input
+//         type="submit">
+//       </input>
+//     </form>
+//   )
+// }
+//
 matchSearch() { return (
-  <form className="age-speed-gender-form" onSubmit= {
+  <form className="age-speed-gender-form" onSubmit={
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
+      <div>
+        <input type="number" min="0" onChange={ this.updateAge }> </input>
+      </div>
+        <div>
           <select
             onChange={this.updateEatingSpeed}
-
             className="step-one-buttons-eat-speed">
             <option value="slow">Leisurely</option>
             <option value="medium">Average Paced</option>
@@ -81,7 +85,6 @@ matchSearch() { return (
 
           <select
             onChange={this.updateGender}
-
             className="step-one-buttons-gender">
             <option value="female">Female</option>
             <option value="male">Male</option>
@@ -89,6 +92,7 @@ matchSearch() { return (
             <option value="genderfluid">Genderfluid</option>
             <option value="notspecified">Not Specified</option>
           </select>
+        </div>
 
           <div className="continue-button"><input type="submit" value="Search for Matches"/></div>
   </form>
@@ -240,8 +244,8 @@ matchSearch() { return (
       <div className="browse-main">
         <div className="user-index-container">
           <ul className="user-index-group">
+            {this.matchSearch()}
             {this.display()}
-            {this.ageSearch()}
           </ul>
         </div>
       </div>
