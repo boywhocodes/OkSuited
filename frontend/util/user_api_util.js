@@ -1,8 +1,8 @@
-export const fetchUsers = users => {
+export const fetchUsers = query_params => {
   return $.ajax({
     method: 'GET',
     url: 'api/users',
-    data: { users }
+    data: { query_params }
   });
 };
 

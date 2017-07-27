@@ -1,6 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, Link } from 'react-router-dom';
 import { requestLogout } from '../../actions/session_actions';
+
+
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -29,7 +31,7 @@ class Navbar extends React.Component {
             </div>
             <ul className="nav-left">
               <li className="nav-left-link">
-                <a href="/#/profile">Browse Matches</a>
+                <Link to="/profile">Find Matches</Link>
               </li>
             </ul>
           </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { IndexRoute } from 'react-router';
-// import UserIndexContainer from './user/user_index_container';
+
 import SplashPageContainer from './login_registration/splash_page_container';
 import SignUpFormContainer from './login_registration/sign_up_form_container';
 import ProfileContainer from './profile/profile_container';
@@ -42,8 +42,8 @@ const App = ({store}) => {
     </header>
 
     <div className={behind}>
-      <Route exact path="/#/profile" component={UserIndexContainer} />
       <Route exact path="/profile/:userId" component={ProfileContainer} />
+      <Route exact path="/profile" component={UserIndexContainer} />
     <Route exact path="/" component={SplashPageContainer} />
   </div>
 

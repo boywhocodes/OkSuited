@@ -33,7 +33,7 @@ class Profile extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.match.params.userId !== nextProps.match.params.userId) {
-      nextProps.fetchCurrentProfile(nextProps.match.params.userId).then(() => {this.setState({ image_url: this.props.profile.image_url});
+      nextProps.fetchCurrentProfile(nextProps.match.params.userId).then(() => {this.setState({ image_url: nextProps.profile.image_url});
       nextProps.fetchResponses(nextProps.profile.id)});
     }
   }
@@ -72,7 +72,7 @@ class Profile extends React.Component {
       );
     } else {
       return (
-        <img className="profile-pic-non-user" src={this.props.profile.image_url}></img>
+        <img className="profile-pic" src={this.props.profile.image_url}></img>
       );
     }
   }

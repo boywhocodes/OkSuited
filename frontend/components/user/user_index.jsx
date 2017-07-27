@@ -8,18 +8,24 @@ class UserIndex extends React.Component {
 
 
     this.state = {
-      distance: 0
+      age: 0,
+      eating_speed: "",
+      gender: ""
     };
+
+
     this.display = this.display.bind(this);
     this.sortedUsers = this.sortedUsers.bind(this);
     this.userIndexItems = this.userIndexItems.bind(this);
 
-    this.preferences = this.preferences.bind(this);
-    this.distanceOptions = this.distanceOptions.bind(this);
+    // this.preferences = this.preferences.bind(this);
+    // this.distanceOptions = this.distanceOptions.bind(this);
     this.handleDistance = this.handleDistance.bind(this);
     this.findMatchPercentage = this.findMatchPercentage.bind(this);
     this.calculateQuestionImportance = this.calculateQuestionImportance.bind(this);
     this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
+    this.ageSearch = this.ageSearch.bind(this);
+    this.updateAge = this.updateAge.bind(this);
   }
 
 
@@ -27,6 +33,66 @@ class UserIndex extends React.Component {
     this.props.fetchUsers(this.state.distance);
     this.setState({ distance: 3000 });
     this.props.fetchQuestions();
+  }
+
+
+  updateAge(e) {
+    e.preventDefault();
+    this.setState({ age: e.currentTarget.value })
+  }
+
+  updateEatingSpeed(e) {
+    e.preventDefault();
+    this.setState({ eating_speed: e.currentTarget.value })
+  }
+
+  updateGender(e) {
+    e.preventDefault();
+    this.setState({ gender: e.currentTarget.value })
+  }
+
+
+  ageSearch() { return (
+    <form className="age-form" onSubmit={ (e) =>{
+        e.preventDefault();
+        this.props.fetchUsersSearch(this.state)}}>
+
+        <input type="number" min="0" onChange={ this.updateAge }> </input>
+      <input
+        type="submit">
+      </input>
+    </form>
+  )
+}
+
+matchSearch() { return (
+  <form className="age-speed-gender-form" onSubmit= {
+      (e) => {
+        e.preventDefault();
+        this.props.fetchUsersSearch(this.state)}}>
+          <select
+            onChange={this.updateEatingSpeed}
+
+            className="step-one-buttons-eat-speed">
+            <option value="slow">Leisurely</option>
+            <option value="medium">Average Paced</option>
+            <option value="fast">Fast</option>
+          </select>
+
+          <select
+            onChange={this.updateGender}
+
+            className="step-one-buttons-gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="transgender">Transgender</option>
+            <option value="genderfluid">Genderfluid</option>
+            <option value="notspecified">Not Specified</option>
+          </select>
+
+          <div className="continue-button"><input type="submit" value="Search for Matches"/></div>
+  </form>
+    )
   }
 
 
@@ -47,13 +113,14 @@ class UserIndex extends React.Component {
   }
 
   userIndexItems() {
-    const matches = this.sortedUsers().map(user => {
+    const user = this.props.users
+    const matches = Object.keys(this.props.users).map(user_id => {
       return (
-        <li key={ user.user }>
+        <li key={ user[user_id].user }>
           <UserIndexItem
             currentUser={ this.props.currentUser }
-            matchPercentage={ user.matchPercentage }
-            user={ this.props.users[user.user] } />
+            matchPercentage={ 50 }
+            user={ user[user_id] } />
         </li>
       );
     });
@@ -174,6 +241,7 @@ class UserIndex extends React.Component {
         <div className="user-index-container">
           <ul className="user-index-group">
             {this.display()}
+            {this.ageSearch()}
           </ul>
         </div>
       </div>

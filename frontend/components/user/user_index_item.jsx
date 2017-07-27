@@ -12,7 +12,7 @@ class UserIndexItem extends Component {
   handleProfile(e) {
     e.preventDefault();
 
-    this.props.router.push(`/profile/${this.props.user.id}`);
+    this.props.history.push(`/profile/${this.props.user.id}`);
   }
 
   matchColor() {
@@ -29,7 +29,7 @@ class UserIndexItem extends Component {
     return (
       <div className="browse-wrapper">
         <div className="browse-item">
-          <img src={this.props.user.image_file_name} className="browse-pic" onClick={ this.handleProfile }></img>
+          <img src={this.props.user.image_url} className="profile-pic" onClick={ this.handleProfile }></img>
           <div className="browse-text">
             <p className="username-text" onClick={ this.handleProfile }>{this.props.user.username}</p>
             <p className="user-browse-info">{this.props.user.age} · {this.props.user.location}</p>

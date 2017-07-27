@@ -6,7 +6,7 @@ import QuestionForm from './question_form';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  responses: state.response.responses,
+  responses: state.response,
   questions: state.question.questions
 });
 

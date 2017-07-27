@@ -1,8 +1,25 @@
 class Api::UsersController < ApplicationController
 
+	def index
+
+		if params[:query_params]
+			eating_speed = search_params[:eating_speed] || ""
+			age = search_params[:age] || 0
+			gender = search_params[:gender] || ""
+
+			@users = User.where("eating_speed like '%#{eating_speed}%'")
+									 .where("age >= #{age}")
+									 .where("gender == '%#{location}%'")
+									 .where.not(id: current_user.id)
+
+		else
+			@users = User.where.not(id: current_user.id)
+		end
+	end
+
 	def create
 		@user = User.new(user_params)
-		
+
 		if @user.save
 			login(@user)
 			render "api/users/show"
@@ -39,4 +56,7 @@ class Api::UsersController < ApplicationController
 		params.require(:user).permit(:username, :summary, :password, :eating_speed, :gender, :age, :location, :five_foods, :three_faves, :daytime, :hobbies, :friday, :message_if, :image_file_name, :image_url)
 	end
 
+	def search_params
+		params.require(:query_params).permit(:eating_speed, :age, :gender)
+	end
 end

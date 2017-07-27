@@ -21,9 +21,9 @@ const StepOne = props => (
       onChange={props.update("eating_speed")}
       value={props.eating_speed}
       className="step-one-buttons-eat-speed">
-      <option value="slow">Leisurely Eating</option>
-      <option value="medium">Average Paced Eating</option>
-      <option value="fast">Fast Eating</option>
+      <option value="slow">Leisurely Eater</option>
+      <option value="medium">Average Paced Eater</option>
+      <option value="fast">Fast Eater</option>
     </select>
 
     <select
