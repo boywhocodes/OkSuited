@@ -27,6 +27,14 @@ class SignUpForm extends React.Component {
   //   }
   // }
 
+  componentWillReceiveProps(nextProps) {
+
+    if (nextProps.loggedIn)  {
+      debugger
+      this.props.history.push(`/profile/${nextProps.user.id}`)
+    }
+  }
+
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
@@ -39,7 +47,7 @@ class SignUpForm extends React.Component {
 
     this.props.signup(user).then(user => {
       this.setState({ username: "", password: ""});
-      this.props.history.push(`/profile/${user.id}`);
+
     });
   }
 

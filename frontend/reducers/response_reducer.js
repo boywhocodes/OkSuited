@@ -1,17 +1,17 @@
 import { RECEIVE_SINGLE_RESPONSE, RECEIVE_RESPONSES } from '../actions/response_actions';
+import merge from 'lodash/merge';
 
-const initialState = {
-  currentResponse: null,
-  responses: {}
-};
 
-const ResponseReducer = (state = initialState, action) => {
+
+const ResponseReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SINGLE_RESPONSE:
-      return { currentResponse: action.response };
+      let newState = merge({}, state)
+      newState[action.response.question.id] = action.response
+      return newState;
     case RECEIVE_RESPONSES:
-      return { responses: action.responses };
+      return action.responses ;
     default:
         return state;
   }

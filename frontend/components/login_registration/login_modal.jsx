@@ -15,6 +15,12 @@ class LogInModal extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn)  {
+      this.props.history.push(`/profile/${nextProps.user.id}`)
+    }
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 
@@ -22,7 +28,7 @@ class LogInModal extends React.Component {
     this.props.login(user).then(user => {
       this.setState({ username: "", password: "" });
       this.props.closeLogInModal();
-      this.props.history.push(`/profile/${user.id}`)
+
     });
   }
 
