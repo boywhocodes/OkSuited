@@ -13,7 +13,7 @@
 
 
 .user-info-group {
-  // margin-top: 100px;
+  // margin-top: 700px;
   // margin-right: 50px;
   margin-left: 50px;
   // position: fixed;
@@ -21,7 +21,11 @@
   width: 100%;
   z-index: 10;
   margin-top: 70px;
-  
+
+}
+
+.user-pic {
+  margin-top: 98px;
 }
 
 
@@ -29,6 +33,11 @@
   font-size: 40px;
   color: #709996;
   font-family: 'Bellefair', serif;
+  display: flex;
+  justify-content: center;
+  // margin-bottom: -
+  // align-items: flex-start;
+
 }
 
 .user-details {
@@ -40,6 +49,7 @@
   justify-content: center;
   flex-direction: column;
   margin-right: 39px;
+  margin-top: -238px;
 }
 .user-dete-age {
   margin-bottom: 20px;
@@ -68,7 +78,13 @@
     -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
     -moz-box-shadow: 0 0 2px 0 rgba(0,0,0,0.25);
     box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+    object-fit: cover;
 
+}
+
+.update-image-button {
+  color: #709996;
+  font-family: 'Bellefair', serif;
 }
 
 

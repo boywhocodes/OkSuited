@@ -7,7 +7,7 @@ class UserIndex extends React.Component {
     super(props);
 
     this.state = {
-      distance = 0 
+      distance = 0
     };
     this.display = this.display.bind(this);
     this.sortedUsers = this.sortedUsers.bind(this);
@@ -194,7 +194,7 @@ class UserIndex extends React.Component {
       return null;
     }
 
-    const { children } = this.props;
+    // const { children } = this.props;
     return (
       <div className="browse-main">
         {this.preferences()}
@@ -202,7 +202,7 @@ class UserIndex extends React.Component {
           <ul className="user-index-group">
             {this.display()}
           </ul>
-          {children}
+          // {children}
         </div>
       </div>
     );
