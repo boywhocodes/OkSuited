@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   profile: state.currentProfile.currentProfile,
   questions: state.question.questions,
   questionId: ownProps.questionId,
-  responses: state.response.responses
+  responses: state.response
 });
 
 const mapDispatchToProps = dispatch => ({

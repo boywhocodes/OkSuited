@@ -21,9 +21,11 @@ class Questions extends React.Component {
     if (this.props.responses) {
       return (
         Object.keys(this.props.responses).map((response) => {
-          return this.props.responses[response].question;
+          return this.props.responses[response].question_id;
         })
       );
+    } else {
+      return [];
     }
   }
 
@@ -38,7 +40,7 @@ class Questions extends React.Component {
   responseAcceptableArray(question_id) {
     let acceptables = null;
     Object.keys(this.props.responses).forEach((response) => {
-      if (this.props.responses[response].question.id === question_id) {
+      if (this.props.responses[response].question_id === question_id) {
         acceptables = this.props.responses[response].acceptable_choices
       }
     });
@@ -47,13 +49,13 @@ class Questions extends React.Component {
 
   answeredQuestionRender() {
     const answeredQuestions = this.answeredQuestions().map((question) => {
-      const questionAnswers = this.props.questions[question.id].choices;
+      const questionAnswers = this.props.questions[question].choices;
 
 
       const answerDisplay = questionAnswers.map((choice) => {
         if (this.responseIdArray().includes(choice.id)) {
           return <p key={choice.id} className="question-answer-match-response">{choice.body + " ✓"}</p>;
-        } else if (this.responseAcceptableArray(question.id).includes(choice.body)) {
+        } else if (this.responseAcceptableArray(question).includes(choice.body)) {
           return <p key={choice.id} className="question-answer-match-response">{choice.body}</p>;
         } else {
           return <p key={choice.id} className="question-answer-crossed">{choice.body}</p>;
@@ -61,11 +63,11 @@ class Questions extends React.Component {
       });
 
       return (
-        
-        <div className="answered-question" key={ question.id }>
+
+        <div className="answered-question" key={ question}>
           <div className="question-content">
             <div className="question-content-title">
-              <p className="actual-title">{question.title}</p>
+              <p className="actual-title">{this.props.questions[question].title}</p>
             </div>
           </div>
         </div>

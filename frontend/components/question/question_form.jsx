@@ -150,6 +150,8 @@ class QuestionForm extends React.Component {
 
 
   renderImportance() {
+
+
     return(
       <div className="user-importance">
         <div className="importance-title">
@@ -233,6 +235,10 @@ class QuestionForm extends React.Component {
   }
 
   render() {
+    if (!this.props.responses) {
+      return null;
+    }
+
     if (this.props.questions) {
       return (
         <div className="new-question">
