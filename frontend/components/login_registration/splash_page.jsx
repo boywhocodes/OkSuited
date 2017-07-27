@@ -34,7 +34,7 @@ class SplashPage extends React.Component {
   handleGuest(e) {
     e.preventDefault();
 
-    this.props.login({ username: "54321", password: "123456"}).then(userAction => {
+    this.props.login({ username: "bedheadredhead24", password: "123456"}).then(userAction => {
       this.props.history.push(`/profile/${userAction.currentUser.id}`);
     });
   }

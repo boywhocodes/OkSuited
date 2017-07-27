@@ -11,7 +11,7 @@ const ResponseReducer = (state = {}, action) => {
       newState[action.response.question.id] = action.response
       return newState;
     case RECEIVE_RESPONSES:
-      return action.responses ;
+      return action.responses;
     default:
         return state;
   }

@@ -31,32 +31,6 @@ class UserIndex extends React.Component {
 
 
 
-  // preferences() {
-  //   let eating_partner;
-  //
-  //   if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "male") {
-  //     eating_partner = "slow-eating-male";
-  //   } else if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "female") {
-  //     eating_partner = "slow-eating-female";
-  //   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "male") {
-  //     eating_partner = "medium-eating-male";
-  //   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "female") {
-  //     eating_partner = "medium-eating-female";
-  //   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "male") {
-  //     eating_partner = "fast-eating-male";
-  //   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "female") {
-  //     eating_partner = "fast-eating-female";
-  //   }
-
-
-
-    return (
-      <div className="preferences-bar">
-        <p className="browse-large">Searching for <u>{eating_partner}</u> seeking <u>{eating_partner}</u> within {this.distanceOptions()} miles from you.</p>
-      </div>
-    );
-
-  }
 
   sortedUsers() {
     return Object.keys(this.props.users).map(user => {
@@ -92,7 +66,7 @@ class UserIndex extends React.Component {
     let otherUserPoints = 0;
     let otherUserQuestionTotal = 0;
 
-    const userQuestions = this.props.currentUser.questions.map((question) => {
+    const userQuestions = this.props.currentUser.questions.map((question) => { //questions aren't nested in currentUser.
       return question.id;
     });
 
@@ -136,7 +110,7 @@ class UserIndex extends React.Component {
 
     user.responses.forEach((response) => {
       if (choices.includes(response.choice_id)) {
-        questionImportance = response.importance;
+        questionImportance = response.importance; //can I pass down importance like this?
       }
     });
 
@@ -197,7 +171,6 @@ class UserIndex extends React.Component {
 
     return (
       <div className="browse-main">
-        {this.preferences()}
         <div className="user-index-container">
           <ul className="user-index-group">
             {this.display()}
@@ -212,3 +185,32 @@ export default withRouter(UserIndex);
 
 // const { children } = this.props;
 // {children}
+
+// {this.preferences()} between browse main and user-index-container
+
+// preferences() {
+//   let eating_partner;
+//
+//   if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "male") {
+//     eating_partner = "slow-eating-male";
+//   } else if (this.props.currentUser.eating_speed === "slow" && this.props.currentUser.gender === "female") {
+//     eating_partner = "slow-eating-female";
+//   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "male") {
+//     eating_partner = "medium-eating-male";
+//   } else if (this.props.currentUser.eating_speed === "medium" && this.props.currentUser.gender === "female") {
+//     eating_partner = "medium-eating-female";
+//   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "male") {
+//     eating_partner = "fast-eating-male";
+//   } else if (this.props.currentUser.eating_speed === "fast" && this.props.currentUser.gender === "female") {
+//     eating_partner = "fast-eating-female";
+//   }
+//
+//
+//
+//   return (
+//     <div className="preferences-bar">
+//       <p className="browse-large">Searching for <u>{eating_partner}</u> seeking <u>{eating_partner}</u> within {this.distanceOptions()} miles from you.</p>
+//     </div>
+//   );
+//
+// }

@@ -92,16 +92,16 @@ class Profile extends React.Component {
                 </div>
                 <div className="user-basics-group">
                   <h2 className="user-name">
-                    {this.props.profile.username}
+                    {this.props.profile.username.charAt(0).toUpperCase() + this.props.profile.username.slice(1)}
                   </h2>
                   </div>
                 </div>
 
                 <div className="user-details">
                   <span className="user-dete-age">Age: {this.props.profile.age}</span>
-                  <span className="user-dete-speed">Eating Speed: {this.props.profile.eating_speed}</span>
-                  <span className="user-dete-gen">Gender: {this.props.profile.gender}</span>
-                  <span className="user-dete-loc">Location: {this.props.profile.location}</span>
+                  <span className="user-dete-speed">Eating Speed: {this.props.profile.eating_speed.charAt(0).toUpperCase() + this.props.profile.eating_speed.slice(1)}</span>
+                  <span className="user-dete-gen">Gender: {this.props.profile.gender.charAt(0).toUpperCase() + this.props.profile.gender.slice(1)}</span>
+                  <span className="user-dete-loc">Location: {this.props.profile.location.charAt(0).toUpperCase() + this.props.profile.location.slice(1)}</span>
 
 
               </div>
@@ -110,7 +110,7 @@ class Profile extends React.Component {
 
           <TabsContainer
             tabs={ [ <EssayContainer />, <QuestionsContainer /> ] }
-            tabNames={ ["Culinary Compendium", "Questions"] }
+            tabNames={ [`About ${this.props.profile.username.charAt(0).toUpperCase() + this.props.profile.username.slice(1)}`, "Questions"] }
             styling="profile-tabs"
             className="tabs-box"/>
         </main>

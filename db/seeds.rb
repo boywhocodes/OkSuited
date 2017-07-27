@@ -8,7 +8,7 @@
 
 User.destroy_all
 user10 = User.create!({
-  username: "54321",
+  username: "LaySeaShell",
   password: "123456",
   location: "94701",
   age: 29,
@@ -16,7 +16,7 @@ user10 = User.create!({
   eating_speed: "Slow-eater",
   image_url: "https://static.pexels.com/photos/509195/pexels-photo-509195.jpeg",
   summary: "I came for the food, I left with a full stomach and a happy soul.",
-  five_foods: "Oh, tough question.  Wow, only five? Hmm.  Vegetarian chicken breast for the protein.  Bananas for energy.  Indian food when I want to let loose.  Carrot juice, because it's always been an amazing conversation starter.",
+  five_foods: "Oh, tough question.  Wow, only five? Hmm.  I love cooking vegetarian chicken breasts with a nice olive oil drizzle.  Bananas before every workout always give me a ton of energy.  Indian food when I want to let loose.  Finally, I love a ncie cup of carrot juice, because it's always been an amazing conversation starter.",
   three_faves: "Not a big coffee drinker, so I'd probably say my thermos up in the mountains when I'm skiing is my fave spot for the brew.  As for bars, how could I choose just one?! Migos on 7th is great for the weekends.  Chery'ls has always had a special place in my heart as well.",
   daytime: "I used to be a professional skateboarder, but after one too many broken bones, I decided to fix the bones and go to medical school.",
   hobbies: "Studying and studying is the only hobby that I have time for right now.",
@@ -148,7 +148,7 @@ user8 = User.create!({
   location: "94701",
   age: 24,
   gender: "female",
-  eating_speed: "Averaged Paced Eating",
+  eating_speed: "Averaged Paced Eater",
   image_url: "https://static.pexels.com/photos/486483/pexels-photo-486483.jpeg",
   summary: "Living my life one meal at a time :)",
   five_foods: "Oranges, grapes, acai, oatmeal, strawberries",
