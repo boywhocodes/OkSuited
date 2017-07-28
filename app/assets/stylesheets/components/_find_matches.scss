@@ -18,11 +18,27 @@
 .age-speed-gender-form {
   display: flex;
   margin-bottom: 35px;
+  font-family: 'Bellefair', serif;
+  color: #709996;
+  font-size: 19px;
+}
+
+.age-search-group {
+  display: flex;
+  flex-direction: row;
 }
 
 .age-search {
   border: 3px solid #709996;
   border-radius: 4px;
+  margin-top: 15px;
+margin-left: 7px;
+margin-right: 5px;
+}
+
+.yrs-old {
+  margin-top: 16px;
+  margin-right: 2px;
 }
 
 .browse-wrapper {
@@ -85,6 +101,20 @@
   display: inline-block;
   margin-bottom: 5px;
   font-family: 'Bellefair', serif;
+}
+
+.browse-match-search {
+  transition: 1s;
+border: 1px solid black;
+border-radius: 4px;
+display: inline;
+font-size: 20px;
+margin: 5px;
+text-align: center;
+padding: 7px;
+background-color: white;
+color: #FF6953;
+box-shadow: 1px 1px 1px solid black;
 }
 
 .username-text:hover {

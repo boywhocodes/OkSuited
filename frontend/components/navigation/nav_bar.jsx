@@ -26,7 +26,7 @@ class Navbar extends React.Component {
           <div>
             <div className="nav-logo-class">
             <h1 className="nav-logo">
-              <a href="/">OkS</a>
+              <a href="/profile">OkS</a>
             </h1>
             </div>
             <ul className="nav-left">

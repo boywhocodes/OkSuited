@@ -59,19 +59,8 @@ matchSearch() { return (
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
-      <div className="age-search">
-        <input type="number" min="0" placeholder="Enter a minimum age" onChange={ this.updateAge } />
-      </div>
         <div>
-          <select
-            onChange={this.updateEatingSpeed}
-            className="step-one-buttons-eat-speed">
-            <option value="slow">Leisurely</option>
-            <option value="medium">Average Paced</option>
-            <option value="fast">Fast</option>
-          </select>
-
-          <select
+          Search for a <select
             onChange={this.updateGender}
             className="step-one-buttons-gender">
             <option value="female">Female</option>
@@ -79,10 +68,24 @@ matchSearch() { return (
             <option value="transgender">Transgender</option>
             <option value="genderfluid">Genderfluid</option>
             <option value="notspecified">Not Specified</option>
-          </select>
-        </div>
+          </select> lunchpal
+          who is an <select
+          onChange={this.updateEatingSpeed}
+          className="step-one-buttons-eat-speed">
+          <option value="slow">Leisurely</option>
+          <option value="medium">Average Paced</option>
+          <option value="fast">Fast</option>
+        </select>eater, and is at least
 
-          <div className="continue-button"><input type="submit" value="Search for Matches"/></div>
+      </div>
+      <div className="age-search-group">
+        <div>
+        <input type="number" min="0" className="age-search" placeholder="Enter a minimum age" onChange={ this.updateAge } />
+        </div>
+        <div className="yrs-old">years old.</div>
+      </div>
+
+          <div className="browse-match-search"><input type="submit" value="Search for Matches"/></div>
   </form>
     )
   }

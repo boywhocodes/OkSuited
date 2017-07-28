@@ -62,17 +62,24 @@ class Questions extends React.Component {
           if (this.responseAcceptableArray(question).includes(choice.body)) {
           acceptableDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body}</p>);
         }
-          explanations.push(this.props.questions[question].explanation);
+        console.log(this.props.responses[question].explanation, "explan");
+          explanations.push(this.props.responses[question].explanation);
       });
 
       return (
 
-        <div className="answered-question" key={ question}>
+        <div className="answered-question" key={question}>
           <div className="question-content">
             <div className="question-content-title">
               <p className="actual-title">{this.props.questions[question].title}</p>
+            </div>
+            <div className="question-content-answer">
               Answer: {answerDisplay}
+            </div>
+            <div className="question-content-acceptables">
               Acceptable Choices: {acceptableDisplay}
+            </div>
+            <div className="question-content-explanation">
               Explanation: {explanations}
             </div>
           </div>
@@ -111,7 +118,7 @@ class Questions extends React.Component {
           <div className="main-questions">
             {this.questionFormHeader()}
             {this.questionFormRender()}
-            <h2 className="show-questions-header">Show Questions</h2>
+            <h2 className="show-questions-header">Responses</h2>
             <div className="answered-questions">
               {this.answeredQuestionRender()}
             </div>
