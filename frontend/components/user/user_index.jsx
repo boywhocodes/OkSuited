@@ -60,22 +60,24 @@ matchSearch() { return (
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
         <div>
-          Search for a <select
+          Search for a <select defaultValue=""
             onChange={this.updateGender}
             className="step-one-buttons-gender">
+            <option value="" disabled>---</option>
             <option value="female">Female</option>
             <option value="male">Male</option>
             <option value="transgender">Transgender</option>
             <option value="genderfluid">Genderfluid</option>
             <option value="notspecified">Not Specified</option>
           </select> lunchpal
-          who is an <select
+          who is an <select defaultValue=""
           onChange={this.updateEatingSpeed}
           className="step-one-buttons-eat-speed">
-          <option value="slow">Leisurely</option>
-          <option value="medium">Average Paced</option>
-          <option value="fast">Fast</option>
-        </select>eater, and is at least
+          <option value="" disabled>---</option>
+          <option value="slow">Leisurely Eater</option>
+          <option value="medium">Average Paced Eater</option>
+          <option value="fast">Fast Eater</option>
+        </select>and is at least
 
       </div>
       <div className="age-search-group">

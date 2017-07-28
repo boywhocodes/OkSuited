@@ -7,9 +7,9 @@ class Api::UsersController < ApplicationController
 			age = search_params[:age] || 0
 			gender = search_params[:gender] || ""
 
-			@users = User.where("eating_speed like '%#{eating_speed}%'")
+			@users = User.where("eating_speed ILIKE '#{eating_speed}'")
 									 .where("age >= #{age}")
-									 .where("gender like '%#{gender}%'")
+									 .where("gender ILIKE '#{gender}'")
 									 .where.not(id: current_user.id)
 
 		else
