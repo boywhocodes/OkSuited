@@ -24,7 +24,7 @@
 
 
 .question-answer {
-  font-size:50px;
+  font-size: 10px;
   color: #474d59;
   margin-top: 10px;
 }
@@ -92,7 +92,7 @@ font-family: 'Bellefair', serif;
 .question-title > p {
   display: inline;
   font-weight: 600;
-  font-size:40px;
+  font-size: 35px;
   line-height: 24px;
 }
 
@@ -102,12 +102,14 @@ font-family: 'Bellefair', serif;
 .choices-form {
   display: block;
   color: #709996;
-  font-size: 26px;
+
 }
 
 .user-choices {
   position: relative;
   margin-bottom: 30px;
+  font-size: 25px;
+
 }
 
 .radio-choice {
@@ -117,6 +119,7 @@ font-family: 'Bellefair', serif;
   padding-left: 30px;
   margin-bottom: 10px;
   line-height: 19px;
+  margin: 19px;
 }
 
 input[type="radio"] {
@@ -139,7 +142,7 @@ input[type="radio"] {
 .acceptables-title > p {
   display: inline;
   font-weight: 600;
-  font-size:40px;
+  font-size: 35px;
   line-height: 24px;
 }
 
@@ -150,6 +153,8 @@ input[type="radio"] {
   padding-left: 30px;
   margin-bottom: 10px;
   line-height: 19px;
+  margin: 19px;
+  font-size: 25px;
 }
 
 input[type="checkbox"] {
@@ -168,13 +173,13 @@ input[type="checkbox"] {
   margin-top: 56px;
   margin-bottom: 15px;
   width: 315px;
-  font-size: 25px;
+
 }
 
 .importance-title > p {
   display: inline;
   font-weight: 600;
-  font-size:50px;
+  font-size: 40px;
   line-height: 24px;
 }
 
@@ -250,7 +255,7 @@ input[type="checkbox"] {
   height: 40px;
   border: 1px solid #FF6953;
   border-radius: 4px;
-  font-size:50px;
+  font-size: 30px;
   line-height: 41px;
   text-align: center;
   box-shadow: 1px 1px 1px rgba(0,0,0, .5);

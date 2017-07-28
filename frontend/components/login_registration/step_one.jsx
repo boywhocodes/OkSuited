@@ -40,7 +40,7 @@ const StepOne = props => (
     </div>
   </div>
   </div>
-    <h1 className="exclamation">!</h1>
+
     <div className="continue-button"><input type="submit" value="Continue"  /></div>
   </form>
 );

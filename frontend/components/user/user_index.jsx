@@ -53,26 +53,14 @@ class UserIndex extends React.Component {
     this.setState({ gender: e.currentTarget.value })
   }
 
-//
-//   ageSearch() { return (
-//     <form className="age-form" onSubmit={ (e) =>{
-//         e.preventDefault();
-//         this.props.fetchUsersSearch(this.state)}}>
-//
-//       <input
-//         type="submit">
-//       </input>
-//     </form>
-//   )
-// }
-//
+
 matchSearch() { return (
   <form className="age-speed-gender-form" onSubmit={
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
       <div>
-        <input type="number" min="0" onChange={ this.updateAge }> </input>
+        <input type="number" min="0" onChange={ this.updateAge } />
       </div>
         <div>
           <select

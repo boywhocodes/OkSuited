@@ -99,7 +99,7 @@ class QuestionForm extends React.Component {
     return (
       Object.keys(this.props.responses).map((response) => { //this.props.responses is null.  What changed???
         console.log(response, "responsekey");
-        return this.props.responses[response].question.id
+        return this.props.responses[response].question_id
       })
     );
   }
@@ -159,7 +159,7 @@ class QuestionForm extends React.Component {
     return(
       <div className="user-importance">
         <div className="importance-title">
-          <p>importance</p>
+          <p>Level of Importance</p>
         </div>
         <div className="importance-radios-group">
           <label className="importance-choice" htmlFor="importance-choice-1">
@@ -242,9 +242,9 @@ class QuestionForm extends React.Component {
   render() {
     console.log(this.props.questions, "questionspasseddown?");
     console.log(this.props.responses, "responsespasseddown?");
-    // if (!this.props.responses) {
-    //   return null;
-    // }
+    if (!this.props.responses) {
+      return null;
+    }
 
     if (this.props.questions) {
       console.log("renderworks");

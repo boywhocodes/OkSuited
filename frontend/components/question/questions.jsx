@@ -9,12 +9,12 @@ class Questions extends React.Component {
 
     };
 
-    // this.answeredQuestions = this.answeredQuestions.bind(this);
-    // this.answeredQuestionsRender = this.answeredQuestionsRender.bind(this);
-    // this.responseIdArray = this.responseIdArray.bind(this);
-    // this.responseAcceptableArray = this.responseAcceptableArray.bind(this);
-    // this.questionFormRender = this.questionFormRender.bind(this);
-    // this.questionsFormHeader = this.questionsFormHeader.bind(this);
+    this.answeredQuestions = this.answeredQuestions.bind(this);
+    this.answeredQuestionRender = this.answeredQuestionRender.bind(this);
+    this.responseIdArray = this.responseIdArray.bind(this);
+    this.responseAcceptableArray = this.responseAcceptableArray.bind(this);
+    this.questionFormRender = this.questionFormRender.bind(this);
+    this.questionFormHeader = this.questionFormHeader.bind(this);
   }
 
   answeredQuestions() {
@@ -51,14 +51,16 @@ class Questions extends React.Component {
     const answeredQuestions = this.answeredQuestions().map((question) => {
       const questionAnswers = this.props.questions[question].choices;
 
-
-      const answerDisplay = questionAnswers.map((choice) => {
+      let answerDisplay = [];
+      let acceptableDisplay = [];
+      questionAnswers.forEach((choice) => {
         if (this.responseIdArray().includes(choice.id)) {
-          return <p key={choice.id} className="question-answer-match-response">{choice.body + " ✓"}</p>;
-        } else if (this.responseAcceptableArray(question).includes(choice.body)) {
-          return <p key={choice.id} className="question-answer-match-response">{choice.body}</p>;
-        } else {
-          return <p key={choice.id} className="question-answer-crossed">{choice.body}</p>;
+          answerDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body + " ✓"}</p>);
+        }
+        const that = this;
+        debugger
+          if (this.responseAcceptableArray(question).includes(choice.body)) {
+          acceptableDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body}</p>);
         }
       });
 
@@ -68,6 +70,8 @@ class Questions extends React.Component {
           <div className="question-content">
             <div className="question-content-title">
               <p className="actual-title">{this.props.questions[question].title}</p>
+              {answerDisplay}
+              {acceptableDisplay}
             </div>
           </div>
         </div>
