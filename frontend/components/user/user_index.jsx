@@ -59,8 +59,8 @@ matchSearch() { return (
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
-      <div>
-        <input type="number" min="0" onChange={ this.updateAge } />
+      <div className="age-search">
+        <input type="number" min="0" placeholder="Enter a minimum age" onChange={ this.updateAge } />
       </div>
         <div>
           <select
@@ -232,7 +232,9 @@ matchSearch() { return (
       <div className="browse-main">
         <div className="user-index-container">
           <ul className="user-index-group">
+            <div className="age-speed-gender-group">
             {this.matchSearch()}
+            </div>
             {this.display()}
           </ul>
         </div>
