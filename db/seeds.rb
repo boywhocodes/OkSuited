@@ -12,12 +12,12 @@ Choice.destroy_all
 Response.destroy_all
 
 user1 = User.create!({
-  username: "bedheadredhead",
+  username: "Puddingpepper",
   password: "123456",
   location: "94701",
   age: 24,
   gender: "female",
-  eating_speed: "Averaged Paced Eating",
+  eating_speed: "Averaged Paced Eater",
   image_url: "https://static.pexels.com/photos/493559/pexels-photo-493559.jpeg",
   summary: "Living my life one meal at a time :)",
   five_foods: "Oranges, grapes, acai, oatmeal, strawberries",
@@ -29,7 +29,7 @@ user1 = User.create!({
 
 
 user2 = User.create!({
-  username: "scurry23",
+  username: "Scurry23",
   password: "123456",
   location: "94701",
   age: 27,
@@ -44,12 +44,12 @@ user2 = User.create!({
   message_if: "You like to play horse during your lunch breaks."
   })
 user3 = User.create!({
-  username: "bedheadredhead24",
+  username: "Bedheadredhead24",
   password: "123456",
   location: "94701",
   age: 24,
   gender: "female",
-  eating_speed: "Averaged Paced Eating",
+  eating_speed: "Averaged Paced Eater",
   image_url: "https://static.pexels.com/photos/509195/pexels-photo-509195.jpeg",
   summary: "Living my life one meal at a time :)",
   five_foods: "Oranges, grapes, acai, oatmeal, strawberries",
@@ -59,7 +59,7 @@ user3 = User.create!({
   message_if: "You want to try the new taco joint on 4th street!"
   })
 user4 = User.create!({
-  username: "philthethrill",
+  username: "Philthethrill",
   password: "123456",
   location: "53075",
   age: 40,
@@ -74,7 +74,7 @@ user4 = User.create!({
   message_if: "You think there's no such thing as a free lunch.  I will prove you wrong."
   })
 user5 = User.create!({
-  username: "lunchlady34",
+  username: "GreenMilkshakes77",
   password: "123456",
   location: "94701",
   age: 34,
@@ -89,7 +89,7 @@ user5 = User.create!({
   message_if: "You work near Baker street and want to explore new salad joints around the city!"
   })
 user6 = User.create!({
-  username: "Thatoldguy",
+  username: "CaviarJuggler",
   password: "123456",
   location: "94701",
   age: 64,
@@ -119,7 +119,7 @@ user7 = User.create!({
   message_if: "You are a fellow science buff, or you know the difference between a Cumulonimbus and Nimbostratus."
   })
 user8 = User.create!({
-  username: "sadfgh",
+  username: "CHeeryTacos",
   password: "123456",
   location: "94701",
   age: 24,
@@ -140,7 +140,7 @@ user8 = User.create!({
     location: "94701",
     age: 29,
     gender: "male",
-    eating_speed: "Slow-eater",
+    eating_speed: "Slow eater",
     image_url: "https://static.pexels.com/photos/519691/pexels-photo-519691.jpeg",
     summary: "I came for the food, I left with a full stomach and a happy soul.",
     five_foods: "Oh, tough question.  Wow, only five? Hmm.  Vegetarian chicken breast for the protein.  Bananas for energy.  Indian food when I want to let loose.  Carrot juice, because it's always been an amazing conversation starter.",
@@ -155,8 +155,8 @@ user8 = User.create!({
     password: "123456",
     location: "94701",
     age: 29,
-    gender: "male",
-    eating_speed: "Slow-eater",
+    gender: "female",
+    eating_speed: "Slow eater",
     image_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAARLAAAAJDVjN2FhY2RkLTcyYmQtNGQzMC05NTUwLTEwODc0ZDM3M2ZiNg.jpg",
     summary: "I came for the food, I left with a full stomach and a happy soul.",
     five_foods: "Oh, tough question.  Wow, only five? Hmm.  I love cooking vegetarian chicken breasts with a nice olive oil drizzle.  Bananas before every workout always give me a ton of energy.  Indian food when I want to let loose.  Finally, I love a ncie cup of carrot juice, because it's always been an amazing conversation starter.",
@@ -230,7 +230,7 @@ user8 = User.create!({
   user_id: user1.id,
   acceptable_choices: [c9.body, c10.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r4 = Response.create(
   choice_id: c13.id,
@@ -253,137 +253,140 @@ user8 = User.create!({
   importance: 50,
   explanation: "I'll eat with anyone regardless of their resstrictions."
   )
+
+
+  # User2 Responses
   r1 = Response.create(
-  choice_id: c1.id,
-  user_id: user1.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  choice_id: c2.id,
+  user_id: user2.id,
+  acceptable_choices: [c2.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "I live and breathe for French food.  Plain and simple."
   )
   r2 = Response.create(
-  choice_id: c5.id,
-  user_id: user1.id,
-  acceptable_choices: [c5.body, c6.body],
+  choice_id: c6.id,
+  user_id: user2.id,
+  acceptable_choices: [c6.body],
+  importance: 50,
+  explanation: "Enough time to clear my head and take a breather before the afternon."
+  )
+  r3 = Response.create(
+  choice_id: c12.id,
+  user_id: user2.id,
+  acceptable_choices: [c10.body, c11.body],
+  importance: 50,
+  explanation: "A proportionate meal is best."
+  )
+  r4 = Response.create(
+  choice_id: c13.id,
+  user_id: user2.id,
+  acceptable_choices: [c13.body, c14.body, c15.body],
   importance: 50,
   explanation: ""
   )
-  r3 = Response.create(
-  choice_id: c9.id,
-  user_id: user1.id,
-  acceptable_choices: [c9.body, c10.body],
-  importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
-  )
-  r4 = Response.create(
-  choice_id: c13.id,
-  user_id: user1.id,
-  acceptable_choices: [c13.body, c14.body, c15.body],
-  importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
-  )
   r5 = Response.create(
   choice_id: c20.id,
-  user_id: user1.id,
+  user_id: user2.id,
   acceptable_choices: [c19.body, c20.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "What can I say? I'm a suck up."
   )
   r6 = Response.create(
-  choice_id: c24.id,
-  user_id: user1.id,
-  acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
+  choice_id: c21.id,
+  user_id: user2.id,
+  acceptable_choices: [c21.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "I enjoy eating with other vegans."
   )
 
 
   # User3 Responses
   r1 = Response.create(
-  choice_id: c1.id,
-  user_id: user1.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  choice_id: c4.id,
+  user_id: user3.id,
+  acceptable_choices: [c2.body, c4.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "I will stop everything for a falafel."
   )
   r2 = Response.create(
-  choice_id: c5.id,
-  user_id: user1.id,
-  acceptable_choices: [c5.body, c6.body],
+  choice_id: c7.id,
+  user_id: user3.id,
+  acceptable_choices: [c7.body],
+  importance: 50,
+  explanation: "Work keeps my lunches short, but my wallet fat ;)"
+  )
+  r3 = Response.create(
+  choice_id: c10.id,
+  user_id: user3.id,
+  acceptable_choices: [c10.body],
   importance: 50,
   explanation: ""
   )
-  r3 = Response.create(
-  choice_id: c9.id,
-  user_id: user1.id,
-  acceptable_choices: [c9.body, c10.body],
-  importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
-  )
   r4 = Response.create(
-  choice_id: c13.id,
-  user_id: user1.id,
-  acceptable_choices: [c13.body, c14.body, c15.body],
+  choice_id: c15.id,
+  user_id: user3.id,
+  acceptable_choices: [c14.body, c15.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "I try to get out at least once per week.  Most of the time I just eat at my desk."
   )
   r5 = Response.create(
-  choice_id: c20.id,
-  user_id: user1.id,
-  acceptable_choices: [c19.body, c20.body],
+  choice_id: c17.id,
+  user_id: user3.id,
+  acceptable_choices: [c17.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "If you follow the news of the world, I'd be open to sitting down over lunch."
   )
   r6 = Response.create(
-  choice_id: c24.id,
-  user_id: user1.id,
+  choice_id: c22.id,
+  user_id: user3.id,
   acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "Allergies include nutes and shellfish, but I can be around them without getting sick."
   )
 
 
   # User4 Responses
   r1 = Response.create(
-  choice_id: c1.id,
+  choice_id: c3.id,
   user_id: user4.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  acceptable_choices: [c1.body, c3.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "My family comes from Quito, so a large part of my food upbringing was centered around South American fare."
   )
   r2 = Response.create(
-  choice_id: c5.id,
+  choice_id: c7.id,
   user_id: user4.id,
   acceptable_choices: [c5.body, c6.body],
   importance: 50,
-  explanation: ""
+  explanation: "I'd like to start trying to take larger lunch breaks.  That's why I was so thrilled to find this site."
   )
   r3 = Response.create(
   choice_id: c9.id,
   user_id: user4.id,
-  acceptable_choices: [c9.body, c10.body],
+  acceptable_choices: [c10.body, c12.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r4 = Response.create(
-  choice_id: c13.id,
+  choice_id: c16.id,
   user_id: user4.id,
   acceptable_choices: [c13.body, c14.body, c15.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "That number has actually increased since joining OkS.  Now I'm actually excited to take lunch breaks."
   )
   r5 = Response.create(
-  choice_id: c20.id,
+  choice_id: c18.id,
   user_id: user4.id,
-  acceptable_choices: [c19.body, c20.body],
+  acceptable_choices: [c18.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "If you're into sports, we will be friends.  Yes, even if you're a Cleveland fan."
   )
   r6 = Response.create(
-  choice_id: c24.id,
+  choice_id: c22.id,
   user_id: user4.id,
-  acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
+  acceptable_choices: [c22.body, c23.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "It's difficult for me to eat soy, but if you're into sports I'll make an exception."
   )
 
 
@@ -391,89 +394,89 @@ user8 = User.create!({
   r1 = Response.create(
   choice_id: c1.id,
   user_id: user5.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  acceptable_choices: [c1.body,c4.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "I recently took a trip to Sichuan and haven't stopped eating the food since."
   )
   r2 = Response.create(
   choice_id: c5.id,
   user_id: user5.id,
   acceptable_choices: [c5.body, c6.body],
   importance: 50,
-  explanation: ""
+  explanation: "I usually go to the gym and grab a sandwich during lunch."
   )
   r3 = Response.create(
   choice_id: c9.id,
   user_id: user5.id,
   acceptable_choices: [c9.body, c10.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "After a good workout, I definitely need a large meal."
   )
   r4 = Response.create(
   choice_id: c13.id,
   user_id: user5.id,
   acceptable_choices: [c13.body, c14.body, c15.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "Food, food, food."
   )
   r5 = Response.create(
   choice_id: c20.id,
   user_id: user5.id,
   acceptable_choices: [c19.body, c20.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "Workouts make me tired. I'm up for talking about any and all events that interest you."
   )
   r6 = Response.create(
   choice_id: c24.id,
   user_id: user5.id,
   acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "Anything works for me!"
   )
 
 
   # User6 Responses
   r1 = Response.create(
-  choice_id: c1.id,
+  choice_id: c4.id,
   user_id: user6.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  acceptable_choices: [c4.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "Three words: Zhong. Guo. Fan."
   )
   r2 = Response.create(
-  choice_id: c5.id,
+  choice_id: c6.id,
   user_id: user6.id,
-  acceptable_choices: [c5.body, c6.body],
+  acceptable_choices: [c6.body],
   importance: 50,
   explanation: ""
   )
   r3 = Response.create(
-  choice_id: c9.id,
+  choice_id: c11.id,
   user_id: user6.id,
-  acceptable_choices: [c9.body, c10.body],
+  acceptable_choices: [c11.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "I can't say I have ever thought about how much I eat."
   )
   r4 = Response.create(
-  choice_id: c13.id,
+  choice_id: c14.id,
   user_id: user6.id,
-  acceptable_choices: [c13.body, c14.body, c15.body],
+  acceptable_choices: [c14.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "There are so many Chinese restaurants and so little time."
   )
   r5 = Response.create(
-  choice_id: c20.id,
+  choice_id: c19.id,
   user_id: user6.id,
-  acceptable_choices: [c19.body, c20.body],
+  acceptable_choices: [c19.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "If you work at my company, let's grab lunch!"
   )
   r6 = Response.create(
-  choice_id: c24.id,
+  choice_id: c23.id,
   user_id: user6.id,
   acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: ""
   )
 
 
@@ -483,66 +486,66 @@ user8 = User.create!({
   user_id: user7.id,
   acceptable_choices: [c1.body, c3.body, c4.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r2 = Response.create(
   choice_id: c5.id,
   user_id: user7.id,
   acceptable_choices: [c5.body, c6.body],
   importance: 50,
-  explanation: ""
+  explanation: "Lunch time is the best time."
   )
   r3 = Response.create(
   choice_id: c9.id,
   user_id: user7.id,
   acceptable_choices: [c9.body, c10.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r4 = Response.create(
   choice_id: c13.id,
   user_id: user7.id,
   acceptable_choices: [c13.body, c14.body, c15.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "I forget about breakfast, so lunch is when I make up for it."
   )
   r5 = Response.create(
   choice_id: c20.id,
   user_id: user7.id,
   acceptable_choices: [c19.body, c20.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "The job is tough enough as it is, I typically like being able to kick back for a few minutes with colleagues."
   )
   r6 = Response.create(
   choice_id: c24.id,
   user_id: user7.id,
   acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "It's the 21st century, c'mon."
   )
 
 
   # User8 Responses
   r1 = Response.create(
-  choice_id: c1.id,
+  choice_id: c3.id,
   user_id: user8.id,
   acceptable_choices: [c1.body, c3.body, c4.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r2 = Response.create(
-  choice_id: c5.id,
+  choice_id: c8.id,
   user_id: user8.id,
   acceptable_choices: [c5.body, c6.body],
   importance: 50,
-  explanation: ""
+  explanation: "Our company has a mandatory lunch hour, so although I prefer not to take a lunch break, hopefully this app can help me meet new people.  That way I will guilt myself into not wanting to stand them up, which will force myself to go out."
   )
   r3 = Response.create(
   choice_id: c9.id,
   user_id: user8.id,
   acceptable_choices: [c9.body, c10.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: ""
   )
   r4 = Response.create(
   choice_id: c13.id,
@@ -559,56 +562,56 @@ user8 = User.create!({
   explanation: "I tend to normally go with the flow of the conversation."
   )
   r6 = Response.create(
-  choice_id: c24.id,
+  choice_id: c23.id,
   user_id: user8.id,
-  acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
+  acceptable_choices: [c23.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "I folow a buddhist-kosher-native-american-paleo diet."
   )
 
 
   # User9 Responses
   r1 = Response.create(
-  choice_id: c1.id,
+  choice_id: c2.id,
   user_id: user9.id,
-  acceptable_choices: [c1.body, c3.body, c4.body],
+  acceptable_choices: [c1.body, c2.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "Fish from the isles of Norway. Goat milk from the Cilean hills. Colombian coffee.  That's what I live for."
   )
   r2 = Response.create(
-  choice_id: c5.id,
+  choice_id: c7.id,
   user_id: user9.id,
-  acceptable_choices: [c5.body, c6.body],
+  acceptable_choices: [c7.body],
   importance: 50,
-  explanation: ""
+  explanation: "I eat McDonald's everyday.  It's fast.  Food quality is superb as well as long as you keep it vegetarian."
   )
   r3 = Response.create(
-  choice_id: c9.id,
+  choice_id: c12.id,
   user_id: user9.id,
-  acceptable_choices: [c9.body, c10.body],
+  acceptable_choices: [c12.body],
   importance: 50,
-  explanation: "It's hard to say no to any style of food :)"
+  explanation: "Truth be told. I only eat McD's becausemy boss goes there everyday.  If you can relate, we should have lunch together."
   )
   r4 = Response.create(
   choice_id: c13.id,
   user_id: user9.id,
-  acceptable_choices: [c13.body, c14.body, c15.body],
+  acceptable_choices: [c13.body],
   importance: 50,
-  explanation: "I love a nice and hearty full meal to help get me through the rest of the day."
+  explanation: "Golden arches five days a week.  Yes, I can already feel the cholestrol building up."
   )
   r5 = Response.create(
-  choice_id: c20.id,
+  choice_id: c18.id,
   user_id: user9.id,
-  acceptable_choices: [c19.body, c20.body],
+  acceptable_choices: [c18.body, c20.body],
   importance: 50,
-  explanation: "I tend to normally go with the flow of the conversation."
+  explanation: "I like talking about the big game...or the small game...or really any size game."
   )
   r6 = Response.create(
   choice_id: c24.id,
   user_id: user9.id,
-  acceptable_choices: [c21.body, c22.body, c23.body, c24.body],
+  acceptable_choices: [c21.body, c24.body],
   importance: 50,
-  explanation: "I'll eat with anyone regardless of their resstrictions."
+  explanation: "Looking to try more vegan food!  Hit me up if you know of any hole in the walls worth checking out."
   )
 
 
