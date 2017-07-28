@@ -144,7 +144,7 @@ class QuestionForm extends React.Component {
     return (
       <div className="user-acceptables">
         <div className="acceptables-title">
-          <p>Choice(s) you won't accept</p>
+          <p>Choices you will also accept</p>
         </div>
         {acceptables}
       </div>

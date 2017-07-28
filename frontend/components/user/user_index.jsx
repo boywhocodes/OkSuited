@@ -111,7 +111,7 @@ matchSearch() { return (
         <li key={ user[user_id].user }>
           <UserIndexItem
             currentUser={ this.props.currentUser }
-            matchPercentage={ 50 }
+            matchPercentage={ Math.floor(Math.random() * 100) }
             user={ user[user_id] } />
         </li>
       );

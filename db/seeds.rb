@@ -14,7 +14,7 @@ user10 = User.create!({
   age: 29,
   gender: "male",
   eating_speed: "Slow-eater",
-  image_url: "https://static.pexels.com/photos/509195/pexels-photo-509195.jpeg",
+  image_url: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAARLAAAAJDVjN2FhY2RkLTcyYmQtNGQzMC05NTUwLTEwODc0ZDM3M2ZiNg.jpg",
   summary: "I came for the food, I left with a full stomach and a happy soul.",
   five_foods: "Oh, tough question.  Wow, only five? Hmm.  I love cooking vegetarian chicken breasts with a nice olive oil drizzle.  Bananas before every workout always give me a ton of energy.  Indian food when I want to let loose.  Finally, I love a ncie cup of carrot juice, because it's always been an amazing conversation starter.",
   three_faves: "Not a big coffee drinker, so I'd probably say my thermos up in the mountains when I'm skiing is my fave spot for the brew.  As for bars, how could I choose just one?! Migos on 7th is great for the weekends.  Chery'ls has always had a special place in my heart as well.",
@@ -29,7 +29,7 @@ user1 = User.create!({
   age: 29,
   gender: "male",
   eating_speed: "Slow-eater",
-  image_url: "https://static.pexels.com/photos/509195/pexels-photo-509195.jpeg",
+  image_url: "https://static.pexels.com/photos/519691/pexels-photo-519691.jpeg",
   summary: "I came for the food, I left with a full stomach and a happy soul.",
   five_foods: "Oh, tough question.  Wow, only five? Hmm.  Vegetarian chicken breast for the protein.  Bananas for energy.  Indian food when I want to let loose.  Carrot juice, because it's always been an amazing conversation starter.",
   three_faves: "Not a big coffee drinker, so I'd probably say my thermos up in the mountains when I'm skiing is my fave spot for the brew.  As for bars, how could I choose just one?! Migos on 7th is great for the weekends.  Chery'ls has always had a special place in my heart as well.",
@@ -44,7 +44,7 @@ user2 = User.create!({
   age: 27,
   gender: "male",
   eating_speed: "Fast Eater",
-  image_url: "https://static.pexels.com/photos/519691/pexels-photo-519691.jpeg",
+  image_url: "https://static.pexels.com/photos/433502/pexels-photo-433502.jpeg",
   summary: "I'm looking to meet new people for lunch on days that I have off from work.  Coach has given us more freedom outside of work as the championships keep piling up, so figured I'd use this opportunity to make some new friends!",
   five_foods: "Dinosaur kale is my go to staple food for salads.  I also love cherry icees, dark chocolate milkyways, garbanzo & kidney beans and drinking rain water because it helps me rain threes.",
   three_faves: "Ayesha's coffee that she makes for me every morning will always be my favorite.  I don't drink much, but when I do I absolutely love a fresh bottle of champagne after a winning another Larry O'Brien trophy.  The Foster's Dog has the best soup in SF in my opinion.  If you haven't been, you definitely need to go!",
@@ -163,6 +163,41 @@ user8 = User.create!({
   c2 = Choice.create(question_id: q1.id, body: "European", order: 2)
   c3 = Choice.create(question_id: q1.id, body: "South American", order: 3)
   c4 = Choice.create(question_id: q1.id, body: "Middle Eastern", order: 4)
+
+
+  q2 = Question.create(title: "What's your favorite style of cuisine?")
+  c5 = Choice.create(question_id: q2.id, body: "Asian", order: 1)
+  c6 = Choice.create(question_id: q2.id, body: "European", order: 2)
+  c7 = Choice.create(question_id: q2.id, body: "South American", order: 3)
+  c8 = Choice.create(question_id: q2.id, body: "Middle Eastern", order: 4)
+
+
+  q3 = Question.create(title: "What's your favorite style of cuisine?")
+  c9 = Choice.create(question_id: q3.id, body: "Asian", order: 1)
+  c10 = Choice.create(question_id: q3.id, body: "European", order: 2)
+  c11 = Choice.create(question_id: q3.id, body: "South American", order: 3)
+  c12 = Choice.create(question_id: q3.id, body: "Middle Eastern", order: 4)
+
+
+  q4 = Question.create(title: "What's your favorite style of cuisine?")
+  c13 = Choice.create(question_id: q4.id, body: "Asian", order: 1)
+  c14 = Choice.create(question_id: q4.id, body: "European", order: 2)
+  c15 = Choice.create(question_id: q4.id, body: "South American", order: 3)
+  c16 = Choice.create(question_id: q4.id, body: "Middle Eastern", order: 4)
+
+
+  q5 = Question.create(title: "What's your favorite style of cuisine?")
+  c17 = Choice.create(question_id: q5.id, body: "Asian", order: 1)
+  c18 = Choice.create(question_id: q5.id, body: "European", order: 2)
+  c19 = Choice.create(question_id: q5.id, body: "South American", order: 3)
+  c20 = Choice.create(question_id: q5.id, body: "Middle Eastern", order: 4)
+
+
+  q6 = Question.create(title: "What's your favorite style of cuisine?")
+  c21 = Choice.create(question_id: q6.id, body: "Asian", order: 1)
+  c22 = Choice.create(question_id: q6.id, body: "European", order: 2)
+  c23 = Choice.create(question_id: q6.id, body: "South American", order: 3)
+  c24 = Choice.create(question_id: q6.id, body: "Middle Eastern", order: 4)
 
 # Red Head Responses
 

@@ -108,11 +108,14 @@ class Profile extends React.Component {
             </div>
           </div>
 
+
+          <div className="background-pic">
           <TabsContainer
             tabs={ [ <EssayContainer />, <QuestionsContainer /> ] }
             tabNames={ [`About ${this.props.profile.username.charAt(0).toUpperCase() + this.props.profile.username.slice(1)}`, "Questions"] }
             styling="profile-tabs"
             className="tabs-box"/>
+        </div>
         </main>
       );
     }

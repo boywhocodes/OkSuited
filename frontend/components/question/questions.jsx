@@ -48,9 +48,10 @@ class Questions extends React.Component {
   }
 
   answeredQuestionRender() {
+
     const answeredQuestions = this.answeredQuestions().map((question) => {
       const questionAnswers = this.props.questions[question].choices;
-
+      let explanations = [];
       let answerDisplay = [];
       let acceptableDisplay = [];
       questionAnswers.forEach((choice) => {
@@ -58,10 +59,10 @@ class Questions extends React.Component {
           answerDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body + " ✓"}</p>);
         }
         const that = this;
-        debugger
           if (this.responseAcceptableArray(question).includes(choice.body)) {
           acceptableDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body}</p>);
         }
+          explanations.push(this.props.questions[question].explanation);
       });
 
       return (
@@ -70,8 +71,9 @@ class Questions extends React.Component {
           <div className="question-content">
             <div className="question-content-title">
               <p className="actual-title">{this.props.questions[question].title}</p>
-              {answerDisplay}
-              {acceptableDisplay}
+              Answer: {answerDisplay}
+              Acceptable Choices: {acceptableDisplay}
+              Explanation: {explanations}
             </div>
           </div>
         </div>
