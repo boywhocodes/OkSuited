@@ -6,15 +6,17 @@ OkSuited is a web application inspired by the popular site OkCupid and built usi
 
 Users are first prompted to a log in/sign up page in which they walk through the steps to find a lunchpal. These steps identify a users eating speed, gender, age and location in order to better help pair them with other users.  Users are also asked to input a unique username and password greater than 6 characters. For existing users, the log in button in the top right prompts a log in modal to render on the screen. After logging in, users are directed to their respective profile page where they can answer questions to better improve their match percentages with other users.  Users are also able to search for matches by a number of parameters including their age, gender, and even their eatings speed.se a gender and sexuality, followed by some general information about themselves including their age and location.
 
-https://user-images.githubusercontent.com/26631708/28739337-05b0f39a-73af-11e7-9ddf-d25167139f7a.png
+![Alt text](https://user-images.githubusercontent.com/26631708/28739337-05b0f39a-73af-11e7-9ddf-d25167139f7a.png "Optional title")
+
 
 From the profile page, users are able to complete a multitude of events.  Users can add their profile picture (which also is stored in the navigation bar and serves to redirect them back to their profile page whenever they click their bright and sparkling image), fill out food-related information such as a brief summary, and five foods that they cannot live without. Their information is stored and is available for other users to view.
 
-https://user-images.githubusercontent.com/26631708/28739330-f8ce551e-73ae-11e7-967e-01e3508ae381.png
+![Alt text](https://user-images.githubusercontent.com/26631708/28739330-f8ce551e-73ae-11e7-967e-01e3508ae381.png "Optional title")
+
 
 In order to better pair users, OkSuited extracts information about them by asking them varying food-related questions.  Questions are assigned to a point value depending on level of importance.  Users are also asked to assign which answers they will accept. From there the algorithm will find users with common questions answered and tallies up points based on the users answers aligning with the x-users acceptable answers.  Both the x-user and original multiply their individual percentages together and the geometric mean is the calculated match percentage.
 
-https://user-images.githubusercontent.com/26631708/28739318-dbe89108-73ae-11e7-9277-4099678a0a03.png
+![Alt text](https://user-images.githubusercontent.com/26631708/28739318-dbe89108-73ae-11e7-9277-4099678a0a03.png "Optional title")
 
 The browse page displays all of the potential new lunchmates a user can view.  Users are able to view other profiles by clicking on the selected profile.  The main functionality lies within the search bar.  Users can search by age, gender, and most importantly eating speed. This allows users to once and for all find the perfect lunch companion to the exact specifications that they prefer.
 
