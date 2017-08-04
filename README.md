@@ -2,9 +2,12 @@
 
 OkSuited is a web application inspired by the popular site OkCupid and built using Ruby on Rails for backend development, a Postgresql database, and ReactJS with a Redux architectural framework on the frontend.  It is inspired as a site for users to find compatible people to have lunch with.
 
+
 ## Splashpage
 
 Users are first prompted to a log in/sign up page in which they walk through the steps to find a lunchpal. These steps identify a users eating speed, gender, age and location in order to better help pair them with other users.  Users are also asked to input a unique username and password greater than 6 characters. For existing users, the log in button in the top right prompts a log in modal to render on the screen. After logging in, users are directed to their respective profile page where they can answer questions to better improve their match percentages with other users.  Users are also able to search for matches by a number of parameters including their age, gender, and even their eatings speed.se a gender and sexuality, followed by some general information about themselves including their age and location.
+
+![Alt text](https://user-images.githubusercontent.com/26631708/28977072-734cda54-78f5-11e7-989f-2d8e7acbed85.png "Optional title")
 
 
 ## Profile
