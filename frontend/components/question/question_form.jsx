@@ -80,11 +80,11 @@ class QuestionForm extends React.Component {
     if (this.props.questions) {
       const unchoiced =
      Object.keys(this.props.questions).map((question) => {
-       console.log(question, "qstackQuestion");
+
         if (this.choicedQuestions().includes(parseInt(question))) {
           return;
         } else {
-          console.log(this.props.questions[question], "propquest[quest]");
+
           return this.props.questions[question];
         }
       }).filter ((val) => val !== undefined);
@@ -98,7 +98,7 @@ class QuestionForm extends React.Component {
   choicedQuestions() {
     return (
       Object.keys(this.props.responses).map((response) => { //this.props.responses is null.  What changed???
-        console.log(response, "responsekey");
+
         return this.props.responses[response].question_id
       })
     );
@@ -216,7 +216,7 @@ class QuestionForm extends React.Component {
   }
 
   renderForm() {
-    console.log("rendform");
+
     if (this.questionStack().length > 0) {
       return(
         <div className="question-form">
@@ -240,14 +240,13 @@ class QuestionForm extends React.Component {
   }
 
   render() {
-    console.log(this.props.questions, "questionspasseddown?");
-    console.log(this.props.responses, "responsespasseddown?");
+
     if (!this.props.responses) {
       return null;
     }
 
     if (this.props.questions) {
-      console.log("renderworks");
+      
       return (
         <div className="new-question">
           {this.renderForm()}

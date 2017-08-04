@@ -26,7 +26,7 @@ class Profile extends React.Component {
   componentDidMount() {
     this.props.fetchCurrentProfile().then(() => {
       this.props.fetchResponses(this.props.profile.id);
-      this.setState({ image_url: this.props.profile.image_url }, () => console.log(this.state, "stae"));
+      this.setState({ image_url: this.props.profile.image_url }, () =>);
     });
     this.props.fetchQuestions();
   }
@@ -54,7 +54,7 @@ class Profile extends React.Component {
             image_url: cloud_url
           });
           const user = this.props.profile;
-          console.log(user, "lojih");
+          
           user.image_url = cloud_url
           this.props.updateProfile({ user });
         }

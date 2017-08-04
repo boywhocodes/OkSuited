@@ -62,7 +62,7 @@ class Questions extends React.Component {
           if (this.responseAcceptableArray(question).includes(choice.body)) {
           acceptableDisplay.push(<p key={choice.id} className="question-answer-match-response">{choice.body}</p>);
         }
-        console.log(this.props.responses[question].explanation, "explan");
+        
           explanations.push(this.props.responses[question].explanation);
       });
 

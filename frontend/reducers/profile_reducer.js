@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const ProfileReducer = (state = initialState, action) => {
-  console.log(";lk");
+  
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_PROFILE:

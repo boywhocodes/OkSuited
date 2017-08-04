@@ -11,7 +11,7 @@ export const fetchSingleQuestion = (question_id) => {
 
 export const fetchQuestions = () => {
   return (dispatch) => {
-    return APIUtil.fetchQuestions().then((questions) => { dispatch(receiveQuestions(questions));console.log(questions); }
+    return APIUtil.fetchQuestions().then((questions) => { dispatch(receiveQuestions(questions));}
   );
   };
 };
