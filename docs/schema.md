@@ -9,7 +9,7 @@
   * zip_code	string	not null
   * culinary_pref	string	not null
   * about	text
-  * seeking_out_lunchmates_that_are	string not nul
+  * seeking_out_lunchmates_that_are	string not null
 
 * culinary_pref
   * id integer not null, primary key
