@@ -2,6 +2,29 @@
 // .behind-everything {
 //   height: 100%;
 // }
+
+
+// @keyframes animatedBackground {
+// 	from { background-position: -1350% 0; }
+// 	to { background-position: 100% 0; }
+// }
+
+// .everything	{
+// 	// width: 560px;
+// 	// height: 400px;
+//   width: 100%;
+//   height: 100vh;
+//
+// 	background-image: url(https://static.pexels.com/photos/503175/pexels-photo-503175.jpeg);
+// 	background-position: 0px 0px;
+// 	background-repeat: repeat-x;
+//
+// 	animation: animatedBackground 120s linear infinite;
+// }
+
+// .everything {
+//   zoom: 28%;
+// }
 @keyframes animatedBackground {
 	from { background-position: -1350% 0; }
 	to { background-position: 1000% 0; }
@@ -24,7 +47,7 @@
   // flex-direction: column;
 width: 100%;
 height: 100vh;
-background: url(http://res.cloudinary.com/boywhocodes/image/upload/v1503427313/Screen_Shot_2017-08-22_at_11.41.08_AM_tubgnu.png)
+background: url(http://res.cloudinary.com/boywhocodes/image/upload/v1503438054/Screen_Shot_2017-08-22_at_11.27.59_AM_fdgdhk.png);
 -webkit-animation: backgroundScroll 150s linear infinite;
 animation: backgroundScroll 150s linear infinite;
 
@@ -123,12 +146,17 @@ margin: 5px;
 }
 .image-container-group {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-
+  justify-content: space-around;
+	flex-direction: row;
+  align-items: baseline;
+	// height: 20px;
+	// top: 340px;
+	// bottom: 50px;
   font-family: 'Bellefair', serif;
-	display: inline-flex;
-margin-top: 20px;
+	// display: inline-flex;
+margin-top: 300px;
+margin-left: 30px;
+margin-right: 30px;
 }
 .image-box-0 {
 	transition: 3s;
@@ -139,6 +167,13 @@ margin-top: 20px;
 	border-radius: 4px;
 	color: #709996;
 	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	height: 78px;
+	width: 238px;
+	
+
+
   // text-shadow: 1px 1px 1px $blue;
 }
 .image-box-0:hover {
@@ -153,6 +188,11 @@ margin-top: 20px;
 	border-radius: 4px;
 	color: #709996;
 	padding: 15px;
+	margin-left: 32px;
+	margin-right: 32px;
+	height: 101px;
+	width: 302px;
+
 	// text-shadow: 2px 2px 1px lightblue;
   // text-shadow: 1px 1px 1px $blue;
 }
@@ -168,34 +208,11 @@ margin-top: 20px;
 	border-radius: 4px;
 	color: #709996;
 	padding: 15px;
-	// margin: 50px;
-  // padding-bottom: 20px;
-	// margin: 4px;
-  // text-shadow: 1px 1px 1px $blue;
+	height: 101px;
+	width: 302px;
+
 }
 
 .image-box-2:hover {
   color: #FF6953;
 }
-
-// @keyframes animatedBackground {
-// 	from { background-position: -1350% 0; }
-// 	to { background-position: 100% 0; }
-// }
-
-// .everything	{
-// 	// width: 560px;
-// 	// height: 400px;
-//   width: 100%;
-//   height: 100vh;
-//
-// 	background-image: url(https://static.pexels.com/photos/503175/pexels-photo-503175.jpeg);
-// 	background-position: 0px 0px;
-// 	background-repeat: repeat-x;
-//
-// 	animation: animatedBackground 120s linear infinite;
-// }
-
-// .everything {
-//   zoom: 28%;
-// }

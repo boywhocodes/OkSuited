@@ -73,7 +73,7 @@ class SplashPage extends React.Component {
           </div>
 
       <div className="bottom-section-group">
-        <div className="image-container-group">
+        <footer className="image-container-group">
           <div>
 
             <p className="image-box-0">
@@ -94,7 +94,7 @@ class SplashPage extends React.Component {
               Only into Asian?  Cater your cuisine preferences dependingon what you're feeling like eating that day
             </p>
           </div>
-        </div>
+        </footer>
         <footer className="footer-group">
           <p className="footer-styling">
             "© OkSuited - Eat Lunch, Make New Friends"
