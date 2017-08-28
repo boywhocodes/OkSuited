@@ -9,3 +9,6 @@ Rails.application.routes.draw do
   end
 
 end
+
+
+# took out gender and eating speed params in controller file.  Need to look into user_index.js file and see what to remove in order to not display both those prarams and fix search to only search by age
