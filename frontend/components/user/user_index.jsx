@@ -59,27 +59,6 @@ matchSearch() { return (
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
-        <div>
-          Search for a <select defaultValue=""
-            onChange={this.updateGender}
-            className="step-one-buttons-gender">
-            <option value="" disabled>---</option>
-            <option value="female">Female</option>
-            <option value="male">Male</option>
-            <option value="transgender">Transgender</option>
-            <option value="genderfluid">Genderfluid</option>
-            <option value="notspecified">Not Specified</option>
-          </select> lunchpal
-          who is an <select defaultValue=""
-          onChange={this.updateEatingSpeed}
-          className="step-one-buttons-eat-speed">
-          <option value="" disabled>---</option>
-          <option value="slow">Leisurely Eater</option>
-          <option value="medium">Average Paced Eater</option>
-          <option value="fast">Fast Eater</option>
-        </select>and is at least
-
-      </div>
       <div className="age-search-group">
         <div>
         <input type="number" min="0" className="age-search" placeholder="Enter a minimum age" onChange={ this.updateAge } />
@@ -281,3 +260,25 @@ export default withRouter(UserIndex);
 //   );
 //
 // }
+
+// <div>
+//   Search for a <select defaultValue=""
+//   onChange={this.updateGender}
+//   className="step-one-buttons-gender">
+//   <option value="" disabled>---</option>
+//   <option value="female">Female</option>
+//   <option value="male">Male</option>
+//   <option value="transgender">Transgender</option>
+//   <option value="genderfluid">Genderfluid</option>
+//   <option value="notspecified">Not Specified</option>
+// </select> lunchpal
+// who is an <select defaultValue=""
+// onChange={this.updateEatingSpeed}
+// className="step-one-buttons-eat-speed">
+// <option value="" disabled>---</option>
+// <option value="slow">Leisurely Eater</option>
+// <option value="medium">Average Paced Eater</option>
+// <option value="fast">Fast Eater</option>
+// </select>and is at least
+//
+// </div>
