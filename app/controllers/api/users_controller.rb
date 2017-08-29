@@ -3,14 +3,12 @@ class Api::UsersController < ApplicationController
 	def index
 
 		if params[:query_params]
-			eating_speed = search_params[:eating_speed] || ""
-			age = search_params[:age] || 0
-			gender = search_params[:gender] || ""
 
-			@users = User.where("eating_speed ILIKE '#{eating_speed}'")
-									 .where("age >= #{age}")
-									 .where("gender ILIKE '#{gender}'")
-									 .where.not(id: current_user.id)
+			age = search_params[:age] || 0
+
+
+			@users = User.where("age >= #{age}")
+								 	 .where.not(id: current_user.id)
 
 		else
 			@users = User.where.not(id: current_user.id)
@@ -57,6 +55,6 @@ class Api::UsersController < ApplicationController
 	end
 
 	def search_params
-		params.require(:query_params).permit(:eating_speed, :age, :gender)
+		params.require(:query_params).permit(:age)
 	end
 end

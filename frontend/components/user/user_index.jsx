@@ -55,7 +55,7 @@ class UserIndex extends React.Component {
 
 
 matchSearch() { return (
-  <form className="age-speed-gender-form" onSubmit={
+  <form className="age-speed-gender-form" onChange={
       (e) => {
         e.preventDefault();
         this.props.fetchUsersSearch(this.state)}}>
