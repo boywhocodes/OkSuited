@@ -26,8 +26,8 @@ class UserIndex extends React.Component {
     this.calculateQuestionScore = this.calculateQuestionScore.bind(this);
     this.matchSearch = this.matchSearch.bind(this);
     this.updateAge = this.updateAge.bind(this);
-    this.updateEatingSpeed = this.updateEatingSpeed.bind(this);
-    this.updateGender = this.updateGender.bind(this);
+    // this.updateEatingSpeed = this.updateEatingSpeed.bind(this);
+    // this.updateGender = this.updateGender.bind(this);
   }
 
 
@@ -43,15 +43,15 @@ class UserIndex extends React.Component {
     this.setState({ age: e.currentTarget.value })
   }
 
-  updateEatingSpeed(e) {
-    e.preventDefault();
-    this.setState({ eating_speed: e.currentTarget.value })
-  }
-
-  updateGender(e) {
-    e.preventDefault();
-    this.setState({ gender: e.currentTarget.value })
-  }
+  // updateEatingSpeed(e) {
+  //   e.preventDefault();
+  //   this.setState({ eating_speed: e.currentTarget.value })
+  // }
+  //
+  // updateGender(e) {
+  //   e.preventDefault();
+  //   this.setState({ gender: e.currentTarget.value })
+  // }
 
 
 matchSearch() { return (
