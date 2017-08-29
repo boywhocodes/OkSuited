@@ -9,8 +9,8 @@ class UserIndex extends React.Component {
 
     this.state = {
       age: 0,
-      eating_speed: "",
-      gender: ""
+      // eating_speed: "",
+      // gender: ""
     };
 
 
