@@ -66,7 +66,6 @@ matchSearch() { return (
         <div className="yrs-old">years old.</div>
       </div>
 
-          <div className="browse-match-search"><input type="submit" value="Search for Matches"/></div>
   </form>
     )
   }
@@ -228,6 +227,8 @@ matchSearch() { return (
 }
 
 export default withRouter(UserIndex);
+
+// <div className="browse-match-search"><input type="submit" value="Search for Matches"/></div>
 
 // const { children } = this.props;
 // {children}
