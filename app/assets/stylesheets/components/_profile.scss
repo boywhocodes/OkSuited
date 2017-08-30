@@ -11,10 +11,13 @@
 
 
 
+  background-image: url(http://res.cloudinary.com/boywhocodes/image/upload/v1503513486/Screen_Shot_2017-08-23_at_11.37.34_AM_zgxobx.png);
+  background-color:rgba(0, 0, 0, 0.5);
+
+
 }
 
 .background-pic {
-  background-image: url(https://static.pexels.com/photos/476907/pexels-photo-476907.jpeg);
   // width: 100%
 }
 
@@ -113,4 +116,8 @@
 
 .profile-tabs.tab-group {
   margin-top: 335
+}
+
+.behind-everything {
+  height: 100vh;
 }

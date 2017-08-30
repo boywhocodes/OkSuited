@@ -40,7 +40,8 @@ class UserIndex extends React.Component {
 
   updateAge(e) {
     e.preventDefault();
-    this.setState({ age: e.currentTarget.value })
+    this.setState({ age: e.currentTarget.value }, () => this.props.fetchUsersSearch(this.state))
+
   }
 
   // updateEatingSpeed(e) {
@@ -55,10 +56,7 @@ class UserIndex extends React.Component {
 
 
 matchSearch() { return (
-  <form className="age-speed-gender-form" onChange={
-      (e) => {
-        e.preventDefault();
-        this.props.fetchUsersSearch(this.state)}}>
+  <form className="age-speed-gender-form" >
       <div className="age-search-group">
         <div>
         <input type="number" min="0" className="age-search" placeholder="Enter a minimum age" onChange={ this.updateAge } />
