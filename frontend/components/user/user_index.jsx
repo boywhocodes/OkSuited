@@ -10,7 +10,7 @@ class UserIndex extends React.Component {
     this.state = {
       age: 0,
       // eating_speed: "",
-      // gender: ""
+      gender: ""
     };
 
 
@@ -27,7 +27,7 @@ class UserIndex extends React.Component {
     this.matchSearch = this.matchSearch.bind(this);
     this.updateAge = this.updateAge.bind(this);
     // this.updateEatingSpeed = this.updateEatingSpeed.bind(this);
-    // this.updateGender = this.updateGender.bind(this);
+    this.updateGender = this.updateGender.bind(this);
   }
 
 
@@ -49,14 +49,26 @@ class UserIndex extends React.Component {
   //   this.setState({ eating_speed: e.currentTarget.value })
   // }
   //
-  // updateGender(e) {
-  //   e.preventDefault();
-  //   this.setState({ gender: e.currentTarget.value })
-  // }
+  updateGender(e) {
+    e.preventDefault();
+    this.setState({ gender: e.currentTarget.value }, () => this.props.fetchUsersSearch(this.state))
+  }
 
 
 matchSearch() { return (
   <form className="age-speed-gender-form" >
+    <div>
+        Search for a <select defaultValue=""
+          onChange={this.updateGender}
+          className="step-one-buttons-gender">
+          <option value="" disabled>---</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="transgender">Transgender</option>
+          <option value="genderfluid">Genderfluid</option>
+          <option value="notspecified">Not Specified</option>
+        </select> lunchpal
+    </div>
       <div className="age-search-group">
         <div>
         <input type="number" min="0" className="age-search" placeholder="Enter a minimum age" onChange={ this.updateAge } />

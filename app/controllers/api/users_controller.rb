@@ -5,9 +5,10 @@ class Api::UsersController < ApplicationController
 		if params[:query_params]
 
 			age = search_params[:age] || 0
-
+			gender = search_params[:gender] || ""
 
 			@users = User.where("age >= #{age}")
+									 .where("gender ILIKE '#{gender}'")
 								 	 .where.not(id: current_user.id)
 
 		else
@@ -55,6 +56,6 @@ class Api::UsersController < ApplicationController
 	end
 
 	def search_params
-		params.require(:query_params).permit(:age)
+		params.require(:query_params).permit(:age, :gender)
 	end
 end
