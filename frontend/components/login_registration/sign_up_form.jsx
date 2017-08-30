@@ -30,7 +30,7 @@ class SignUpForm extends React.Component {
   componentWillReceiveProps(nextProps) {
 
     if (nextProps.loggedIn)  {
-      debugger
+      
       this.props.history.push(`/profile/${nextProps.user.id}`)
     }
   }
