@@ -9,7 +9,6 @@ class UserIndex extends React.Component {
 
     this.state = {
       age: 0,
-      // eating_speed: "",
       gender: ""
     };
 
@@ -41,14 +40,10 @@ class UserIndex extends React.Component {
   updateAge(e) {
     e.preventDefault();
     this.setState({ age: e.currentTarget.value }, () => this.props.fetchUsersSearch(this.state))
-
   }
 
-  // updateEatingSpeed(e) {
-  //   e.preventDefault();
-  //   this.setState({ eating_speed: e.currentTarget.value })
-  // }
-  //
+
+
   updateGender(e) {
     e.preventDefault();
     this.setState({ gender: e.currentTarget.value }, () => this.props.fetchUsersSearch(this.state))
@@ -56,26 +51,25 @@ class UserIndex extends React.Component {
 
 
 matchSearch() { return (
-  <form className="age-speed-gender-form" >
-    <div>
-        Search for a <select defaultValue=""
-          onChange={this.updateGender}
-          className="step-one-buttons-gender">
-          <option value="" disabled>---</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="transgender">Transgender</option>
-          <option value="genderfluid">Genderfluid</option>
-          <option value="notspecified">Not Specified</option>
-        </select> lunchpal
-    </div>
+  <form className="age-speed-gender-form" > <div>
+          Search for a <select defaultValue=""
+            onChange={this.updateGender}
+            className="step-one-buttons-gender">
+            <option value="" disabled>---</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="transgender">Transgender</option>
+            <option value="genderfluid">Genderfluid</option>
+            <option value="notspecified">Not Specified</option>
+          </select> lunchpal
+          who is at least
+      </div>
       <div className="age-search-group">
         <div>
         <input type="number" min="0" className="age-search" placeholder="Enter a minimum age" onChange={ this.updateAge } />
         </div>
         <div className="yrs-old">years old.</div>
       </div>
-
   </form>
     )
   }

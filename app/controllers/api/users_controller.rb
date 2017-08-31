@@ -3,9 +3,10 @@ class Api::UsersController < ApplicationController
 	def index
 
 		if params[:query_params]
-
-			age = search_params[:age] || 0
+				age = search_params[:age] || 0
 			gender = search_params[:gender] || ""
+
+
 
 			@users = User.where("age >= #{age}")
 									 .where("gender ILIKE '#{gender}'")
